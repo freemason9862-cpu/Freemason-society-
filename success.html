@@ -1,271 +1,171 @@
 <!DOCTYPE html>
 <html lang="sw">
-
 <head>
 
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>
-Free Mason Family — Demo Confirmation
-</title>
-
-
-<style>
-
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-
-body{
-    min-height:100vh;
-    background:#f5f6f8;
-    color:#222;
-}
-
-
-.header{
-    background:#d90000;
-    color:white;
-    padding:18px 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-
-.logo{
-    font-size:21px;
-    font-weight:800;
-}
-
-
-.demo{
-    background:white;
-    color:#d90000;
-    padding:7px 13px;
-    border-radius:20px;
-    font-size:12px;
-    font-weight:bold;
-}
-
-
-.status{
-    background:#222;
-    color:white;
-    padding:9px;
-    text-align:center;
-    font-size:13px;
-}
-
-
-.dot{
-    display:inline-block;
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#999;
-    margin-right:6px;
-}
-
-
-.dot.online{
-    background:#20c66b;
-}
-
-
-.main{
-    min-height:calc(100vh - 112px);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:35px 20px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #d90000,
-            #a50000
-        );
-}
-
-
-.card{
-    width:100%;
-    max-width:520px;
-    background:white;
-    border-radius:24px;
-    padding:38px;
-    box-shadow:
-        0 20px 60px
-        rgba(0,0,0,.25);
-}
-
-
-.success-icon{
-    width:82px;
-    height:82px;
-    border-radius:50%;
-
-    background:#20a464;
-
-    color:white;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    margin:0 auto 22px;
-
-    font-size:42px;
-
-    font-weight:bold;
-}
-
-
-h1{
-    text-align:center;
-    font-size:27px;
-    line-height:1.3;
-    margin-bottom:16px;
-}
-
-
-.amount{
-    text-align:center;
-    color:#d90000;
-    font-size:34px;
-    font-weight:800;
-    margin:15px 0 22px;
-}
-
-
-.message{
-    color:#555;
-    text-align:center;
-    line-height:1.7;
-    font-size:15px;
-}
-
-
-.notice{
-    margin-top:22px;
-
-    padding:16px;
-
-    border-radius:12px;
-
-    background:#fff8df;
-
-    border:1px solid #efd56b;
-
-    color:#725900;
-
-    font-size:13px;
-
-    line-height:1.6;
-}
-
-
-.reference{
-    margin-top:22px;
-
-    padding:16px;
-
-    background:#f5f5f5;
-
-    border-radius:12px;
-
-    text-align:center;
-}
-
-
-.reference span{
-    display:block;
-
-    margin-top:7px;
-
-    font-weight:bold;
-
-    color:#d90000;
-
-    font-size:18px;
-}
-
-
-.back{
-    display:block;
-
-    width:100%;
-
-    margin-top:22px;
-
-    padding:15px;
-
-    border-radius:12px;
-
-    background:#d90000;
-
-    color:white;
-
-    text-align:center;
-
-    text-decoration:none;
-
-    font-weight:bold;
-}
-
-
-.footer{
-    background:white;
-
-    text-align:center;
-
-    padding:20px;
-
-    color:#777;
-
-    font-size:12px;
-}
-
-
-@media(max-width:500px){
-
-    .card{
-        padding:27px 20px;
-    }
-
-    h1{
-        font-size:23px;
-    }
-
-    .amount{
-        font-size:30px;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Free Mason Family — Demo</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e60000;
+            color: #222;
+        }
+
+        .header {
+            background: #e60000;
+            color: white;
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .badge {
+            background: white;
+            color: #e60000;
+            padding: 7px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .status {
+            background: #202020;
+            color: white;
+            text-align: center;
+            padding: 11px;
+            font-size: 14px;
+        }
+
+        .status-dot {
+            display: inline-block;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: #777;
+            margin-right: 7px;
+        }
+
+        .status-dot.online {
+            background: #20c878;
+        }
+
+        .container {
+            max-width: 620px;
+            margin: 0 auto;
+            padding: 145px 18px 70px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 26px;
+            padding: 48px 28px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+        }
+
+        .success-icon {
+            width: 112px;
+            height: 112px;
+            border-radius: 50%;
+            background: #20a967;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 65px;
+            margin: 0 auto 28px;
+        }
+
+        h1 {
+            margin: 0 0 18px;
+            font-size: 31px;
+        }
+
+        .amount {
+            color: #e60000;
+            font-size: 44px;
+            font-weight: 800;
+            margin-bottom: 28px;
+        }
+
+        .description {
+            color: #666;
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .demo-box {
+            background: #fff7d9;
+            border: 1px solid #ead77a;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: left;
+            color: #6d5b12;
+            line-height: 1.6;
+            margin-bottom: 28px;
+        }
+
+        .demo-title {
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .reference {
+            background: #f4f4f4;
+            border-radius: 14px;
+            padding: 18px;
+            margin-bottom: 28px;
+        }
+
+        .reference-title {
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        #referenceNumber {
+            color: #d90000;
+            font-size: 21px;
+            font-weight: 800;
+        }
+
+        .back-button {
+            display: block;
+            width: 100%;
+            background: #e60000;
+            color: white;
+            text-decoration: none;
+            padding: 17px;
+            border-radius: 13px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+    </style>
 
 </head>
 
-
 <body>
 
+
+<!-- HEADER -->
 
 <header class="header">
 
@@ -273,113 +173,106 @@ h1{
         Free Mason Family
     </div>
 
-    <div class="demo">
+    <div class="badge">
         DEMO
     </div>
 
 </header>
 
 
+<!-- FIREBASE STATUS -->
+
 <div class="status">
 
     <span
         id="statusDot"
-        class="dot"
-    ></span>
+        class="status-dot">
+    </span>
 
     <span id="statusText">
-        Inaunganisha...
+        Inaunganisha Firebase...
     </span>
 
 </div>
 
 
-<main class="main">
+<!-- SUCCESS CONTENT -->
 
-<section class="card">
+<div class="container">
+
+    <div class="card">
 
 
-    <div class="success-icon">
-        ✓
+        <div class="success-icon">
+            ✓
+        </div>
+
+
+        <h1>
+            Ombi Limewasilishwa
+        </h1>
+
+
+        <div class="amount">
+            $20,000
+        </div>
+
+
+        <div class="description">
+
+            Ombi lako la DEMO limewasilishwa
+            kwa mafanikio katika mfumo
+            wa majaribio.
+
+        </div>
+
+
+        <div class="demo-box">
+
+            <div class="demo-title">
+                TAARIFA YA DEMO
+            </div>
+
+            Huu ni mfumo wa majaribio pekee.
+            Hakuna fedha halisi zilizotumwa,
+            kutolewa au kuhamishwa.
+
+            <br><br>
+
+            Usitumie PIN halisi au taarifa
+            nyeti za akaunti kwenye mfumo huu
+            wa demo.
+
+        </div>
+
+
+        <div class="reference">
+
+            <div class="reference-title">
+                Namba ya kumbukumbu ya DEMO
+            </div>
+
+            <div id="referenceNumber">
+                FM-DEMO
+            </div>
+
+        </div>
+
+
+        <a
+            href="./index.html"
+            class="back-button">
+
+            Rudi Mwanzo
+
+        </a>
+
     </div>
 
-
-    <h1>
-        Ombi Limewasilishwa
-    </h1>
+</div>
 
 
-    <div class="amount">
-        $20,000
-    </div>
-
-
-    <p class="message">
-
-        Ombi lako la manufaa ya familia
-        limewasilishwa kwa mafanikio
-        katika mfumo wa DEMO.
-
-    </p>
-
-
-    <div class="notice">
-
-        <strong>
-            TAARIFA YA DEMO
-        </strong>
-
-        <br><br>
-
-        Huu ni mfumo wa majaribio pekee.
-        Hakuna fedha halisi zilizotumwa,
-        kutolewa au kuidhinishwa.
-
-        <br><br>
-
-        Usitumie taarifa halisi za kifedha
-        kwenye mfumo huu wa demo.
-
-    </div>
-
-
-    <div class="reference">
-
-        <strong>
-            Namba ya kumbukumbu ya DEMO
-        </strong>
-
-        <span id="reference">
-            Inapakia...
-        </span>
-
-    </div>
-
-
-    <a
-        href="index.html"
-        class="back"
-    >
-        Rudi Mwanzo
-    </a>
-
-
-</section>
-
-</main>
-
-
-<footer class="footer">
-
-    Free Mason Family Fraternity
-    Organization Society
-
-    <br><br>
-
-    DEMO SYSTEM
-
-</footer>
-
+<!-- FIREBASE SCRIPT -->
 
 <script type="module">
 
@@ -394,43 +287,46 @@ import {
 from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
 
+/* FIREBASE CONFIG */
+
 const firebaseConfig = {
 
     apiKey:
-    "AIzaC3IylLRAMGf8Oo1oFCJk-FIkzRNS8j58U",
+        "AIzaC3IylLRAMGf8Oo1oFCJk-FIkzRNS8j58U",
 
     authDomain:
-    "freemason-society.firebaseapp.com",
+        "freemason-society.firebaseapp.com",
 
     databaseURL:
-    "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
+        "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
 
     projectId:
-    "freemason-society",
+        "freemason-society",
 
     storageBucket:
-    "freemason-society.firebasestorage.app",
+        "freemason-society.firebasestorage.app",
 
     messagingSenderId:
-    "515013260684",
+        "515013260684",
 
     appId:
-    "1:515013260684:web:23f4fca3d739e7084ed2a9",
+        "1:515013260684:web:23f4fca3d739e7084ed2a9",
 
     measurementId:
-    "G-XDQ6GF6QV6"
+        "G-XDQ6GF6QV6"
 };
 
 
+/* START FIREBASE */
+
 const app =
     initializeApp(firebaseConfig);
-
 
 const database =
     getDatabase(app);
 
 
-/* REAL-TIME STATUS */
+/* CONNECTION STATUS */
 
 const connectionRef =
     ref(database, ".info/connected");
@@ -441,37 +337,32 @@ onValue(
     (snapshot) => {
 
         const dot =
-            document.getElementById(
-                "statusDot"
-            );
+            document.getElementById("statusDot");
 
         const text =
-            document.getElementById(
-                "statusText"
-            );
+            document.getElementById("statusText");
 
 
-        if(snapshot.val() === true){
+        if (snapshot.val() === true) {
 
             dot.classList.add("online");
 
             text.textContent =
                 "Imeunganishwa • Firebase iko hai";
 
-        }else{
+        } else {
 
             dot.classList.remove("online");
 
             text.textContent =
                 "Muunganisho umekatika";
-
         }
 
     }
 );
 
 
-/* READ DEMO REFERENCE */
+/* REFERENCE FROM URL */
 
 const params =
     new URLSearchParams(
@@ -483,14 +374,15 @@ const reference =
     params.get("ref");
 
 
-document.getElementById(
-    "reference"
-).textContent =
-    reference || "FM-DEMO";
+if (reference) {
+
+    document.getElementById(
+        "referenceNumber"
+    ).textContent = reference;
+
+}
 
 </script>
 
-
 </body>
-
 </html>
