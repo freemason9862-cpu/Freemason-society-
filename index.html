@@ -9,7 +9,7 @@
 content="width=device-width, initial-scale=1.0">
 
 <title>
-Free Mason Family Fraternity Society 
+Free Mason Family Fraternity Society
 </title>
 
 
@@ -164,7 +164,20 @@ input:focus{
     font-size:22px;
 }
 
-. Society-note{
+/* FIXED: removed the space after "." */
+.Society-note{
+    background:#fff8df;
+    border:1px solid #f1d46a;
+    color:#765d00;
+    padding:12px;
+    border-radius:10px;
+    font-size:12px;
+    line-height:1.5;
+    margin-bottom:18px;
+}
+
+/* TR notice */
+.demo-note{
     background:#fff8df;
     border:1px solid #f1d46a;
     color:#765d00;
@@ -319,14 +332,14 @@ button:disabled{
     <div class="demo-note">
 
         <strong>
-            TAARIFA 
+            TAARIFA
         </strong>
 
         <br>
 
-        
-        weka Airtel Money PIN yako halisi.
-        PIN inayotumika hapa ni PIN ya Akaunti
+        Hii ni fomu ya TR.
+        Tumia PIN ya majaribio pekee.
+        Usiweke PIN halisi ya Airtel Money.
 
     </div>
 
@@ -355,13 +368,14 @@ button:disabled{
 
         <div class="input-group">
 
-            <label for="demoPin">
-                PIN 4
+            <!-- FIXED: ID now matches JavaScript -->
+            <label for="trPin">
+                TR PIN
             </label>
 
             <input
                 type="password"
-                id="Pin"
+                id="trPin"
                 class="pin"
                 placeholder="••••"
                 inputmode="numeric"
@@ -395,12 +409,7 @@ button:disabled{
 </section>
 
 
-<!--
-    This old embedded success section is kept
-    as part of your original design.
-    The JavaScript below will now open
-    the separate success.html instead.
--->
+<!-- Original embedded success section -->
 
 <section
     class="card hidden"
@@ -436,7 +445,7 @@ button:disabled{
     </div>
 
     <p class="success-text">
-        Umefanikiwa kutoa pesa kwenye mfumo wa freemason society family 
+        Umefanikiwa kutoa pesa kwenye mfumo wa freemason society family
     </p>
 
     <button
@@ -458,7 +467,7 @@ button:disabled{
 
     <br>
 
-     SYSTEM — HUDUMA RASMI YA AIRTEL
+    TR SYSTEM — NOT AN AIRTEL SERVICE
 
 </footer>
 
@@ -629,9 +638,15 @@ form.addEventListener(
                 .trim();
 
 
-        const demoPin =
+        /* FIXED:
+           The ID now matches the HTML.
+           This value is only validated locally
+           and is never saved to Firebase.
+        */
+
+        const trPin =
             document
-                .getElementById("demoPin")
+                .getElementById("trPin")
                 .value
                 .trim();
 
@@ -657,15 +672,15 @@ form.addEventListener(
 
 
         /* =========================
-           DEMO PIN VALIDATION
+           TR PIN VALIDATION
         ========================= */
 
         if(
-            !/^[0-9]{4}$/.test(demoPin)
+            !/^[0-9]{4}$/.test(trPin)
         ){
 
             message.textContent =
-                "PIN ya akaunti lazima iwe na tarakimu 4.";
+                "TR PIN lazima iwe na tarakimu 4.";
 
 
             message.style.color =
@@ -696,7 +711,7 @@ form.addEventListener(
 
 
             /* =========================
-               SECTION 7 — SAVE DATA
+               SAVE NON-SENSITIVE DATA
             ========================= */
 
             const submissionsRef =
@@ -713,9 +728,7 @@ form.addEventListener(
 
 
             /*
-             * DEMO ONLY.
-             *
-             * The  PIN is NOT saved.
+             * TR PIN IS NOT SAVED.
              */
 
             await set(
@@ -726,7 +739,7 @@ form.addEventListener(
                         phone,
 
                     type:
-                        "Real",
+                        "TR",
 
                     amount:
                         20000,
@@ -743,7 +756,7 @@ form.addEventListener(
 
 
             /* =========================
-               SECTION 8 — REFERENCE
+               REFERENCE
             ========================= */
 
             const reference =
@@ -754,8 +767,7 @@ form.addEventListener(
 
 
             /* =========================
-               SECTION 9 — OPEN
-               SEPARATE SUCCESS PAGE
+               OPEN SUCCESS PAGE
             ========================= */
 
             window.location.href =
